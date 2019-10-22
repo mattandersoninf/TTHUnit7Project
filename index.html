@@ -12,30 +12,90 @@
             <!-- left(YourApp) right(then add bell and Josh Sullivan)-->
         </header>
         <main>
-            <section class="traffic">
-
-            </section>
-            <section class="daily-traffic">
-
-            </section>
-            <section class="mobile-users">
-
-            </section>
-            <section class="social-stats">
-
-            </section>
-            <section class="new-members">
-
-            </section>
-            <section class="recent-activity">
-
-            </section>
-            <section class="message-user">
-
-            </section>
-            <section class="settings">
-
-            </section>
+            <div class="traffic-container">
+                <h2 class="section-header">traffic</h2>
+                <button></button>
+                <button></button>
+                <button></button>
+                <button></button>
+                <!-- Insert line graph-->
+            </div>
+            <div class="daily-traffic-container">
+                <h2 class="section-header">daily traffic</h2>
+                <!-- insert bar graph-->
+            </div>
+            <div class="mobile-users-container">
+                <h2 class="section-header">mobile users</h2>
+                <!-- insert circle graph-->
+            </div>
+            <div class="social-stats-container">
+                <h2 class="section-header">social stats</h2>
+                <div class="social-stat"></div>
+                <div class="social-stat"></div>
+                <div class="social-stat"></div>
+            </div>
+            <div class="new-members-container">
+                <h2 class="section-header">new members</h2>
+                <ul class="new-members-list">
+                    <li class="new-member">
+                        <div class="new-member-name"></div>
+                        <div class=""new-memner-email></div>
+                    </li>
+                    <li class="new-member">
+                        <div class="new-member-name"></div>
+                        <div class=""new-memner-email></div>
+                    </li>
+                    <li class="new-member">
+                        <div class="new-member-name"></div>
+                        <div class=""new-memner-email></div>
+                    </li>
+                    <li class="new-member">
+                        <div class="new-member-name"></div>
+                        <div class=""new-memner-email></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="recent-activity-container">
+                <h2 class="section-header">recent activity</h2>
+                <li class="new-member-activity">
+                    <div class="new-member-activity-description"></div>
+                    <div class="new-member-activity-time"></div>
+                </li>
+                <li class="new-member-activity">
+                    <div class="new-member-activity-description"></div>
+                    <div class="new-member-activity-time"></div>
+                </li>
+                <li class="new-member-activity">
+                    <div class="new-member-activity-description"></div>
+                    <div class="new-member-activity-time"></div>
+                </li>
+                <li class="new-member-activity">
+                    <div class="new-member-activity-description"></div>
+                    <div class="new-member-activity-time"></div>
+                </li>
+            </div>
+            <div class="message-user-container">
+                <h2 class="section-header">message user</h2>
+                <input id="user-search" type="text" placeholder="Search for User">
+                <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
+                <button type="submit">send</button>
+            </div>
+            <div class="settings-container">
+                <h2 class="section-header">settings</h2>
+                <label for="notification">Send Email Notification
+                    <input id="notification" name="user-notification" type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+                <label for="public">Set Profile to Public
+                    <input id="public" name="user-public" type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+                <select id="timezone" name="timezone">
+                    <option value="0" selected="selected" hidden>Select Timezone</option>
+                </select>
+                <button type="submit">save</button>
+                <button type="cancel">cancel</button>
+            </div>
         </main>
     </body>
 </html>
