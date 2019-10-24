@@ -2,100 +2,129 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>tth-unit-8-project</title>
+        <title>tth-unit-7-project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Matthew Anderson">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     </head>
     <body>
         <header>
-            <!-- left(YourApp) right(then add bell and Josh Sullivan)-->
+            <div class="header-container">
+                <div class="app-name"><b>Your</b>App<sup>TM</sup></div>
+                <div class="notification"></div>
+                <div class="avatar"></div>
+                <div class="user-name"></div>
+            </div>
         </header>
         <main>
-            <div class="traffic-container">
-                <h2 class="section-header">traffic</h2>
-                <button></button>
-                <button></button>
-                <button></button>
-                <button></button>
-                <!-- Insert line graph-->
-            </div>
-            <div class="daily-traffic-container">
-                <h2 class="section-header">daily traffic</h2>
-                <!-- insert bar graph-->
-            </div>
-            <div class="mobile-users-container">
-                <h2 class="section-header">mobile users</h2>
-                <!-- insert circle graph-->
-            </div>
-            <div class="social-stats-container">
-                <h2 class="section-header">social stats</h2>
-                <div class="social-stat"></div>
-                <div class="social-stat"></div>
-                <div class="social-stat"></div>
-            </div>
-            <div class="new-members-container">
-                <h2 class="section-header">new members</h2>
-                <ul class="new-members-list">
-                    <li class="new-member">
-                        <div class="new-member-name"></div>
-                        <div class=""new-memner-email></div>
+            <div class = grid>
+                <div class="main-nav">
+                    <ul>
+                        <a href="#"> <li class="nav-item"></li></a>
+                        <a href="#users"> <li class="nav-item"></li></a>
+                        <a href="#visits"> <li class="nav-item"></li></a>
+                        <a href="#settings"> <li class="nav-item"></li></a>
+                    </ul>
+                </div>
+                <div class="traffic-container">
+                    <h2 class="section-header">TRAFFIC</h2>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <!-- Insert line graph-->
+                </div>
+                <div class="daily-traffic-container">
+                    <h2 class="section-header">DAILY TRAFFIC</h2>
+                    <!-- insert bar graph-->
+                </div>
+                <div id="users" class="mobile-user-container">
+                    <h2 class="section-header">MOBILE USERS</h2>
+                    <!-- insert circle graph-->
+                </div>
+                <div class="social-stats-container">
+                    <h2 class="section-header">SOCIAL STATS</h2>
+                    <div class="social-stat twitter"></div>
+                    <div class="social-stat facebook"></div>
+                    <div class="social-stat google"></div>
+                </div>
+                <div class="new-user-container">
+                    <h2 class="section-header">NEW MEMBERS</h2>
+                    <ul class="new-user-list">
+                        <li class="new-user">
+                            <div class="new-user-name"></div>
+                            <div class=""new-user-email></div>
+                        </li>
+                        <li class="new-user">
+                            <div class="new-user-name"></div>
+                            <div class=""new-user-email></div>
+                        </li>
+                        <li class="new-user">
+                            <div class="new-user-name"></div>
+                            <div class=""new-user-email></div>
+                        </li>
+                        <li class="new-user">
+                            <div class="new-user-name"></div>
+                            <div class=""new-user-email></div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="visits" class="recent-activity-container">
+                    <h2 class="section-header">RECENT ACTIVITY</h2>
+                    <li class="new-user-activity">
+                        <div class="new-user-activity-description"></div>
+                        <div class="new-user-activity-time"></div>
                     </li>
-                    <li class="new-member">
-                        <div class="new-member-name"></div>
-                        <div class=""new-memner-email></div>
+                    <li class="new-user-activity">
+                        <div class="new-user-activity-description"></div>
+                        <div class="new-user-activity-time"></div>
                     </li>
-                    <li class="new-member">
-                        <div class="new-member-name"></div>
-                        <div class=""new-memner-email></div>
+                    <li class="new-user-activity">
+                        <div class="new-user-activity-description"></div>
+                        <div class="new-user-activity-time"></div>
                     </li>
-                    <li class="new-member">
-                        <div class="new-member-name"></div>
-                        <div class=""new-memner-email></div>
+                    <li class="new-user-activity">
+                        <div class="new-user-activity-description"></div>
+                        <div class="new-user-activity-time"></div>
                     </li>
-                </ul>
-            </div>
-            <div class="recent-activity-container">
-                <h2 class="section-header">recent activity</h2>
-                <li class="new-member-activity">
-                    <div class="new-member-activity-description"></div>
-                    <div class="new-member-activity-time"></div>
-                </li>
-                <li class="new-member-activity">
-                    <div class="new-member-activity-description"></div>
-                    <div class="new-member-activity-time"></div>
-                </li>
-                <li class="new-member-activity">
-                    <div class="new-member-activity-description"></div>
-                    <div class="new-member-activity-time"></div>
-                </li>
-                <li class="new-member-activity">
-                    <div class="new-member-activity-description"></div>
-                    <div class="new-member-activity-time"></div>
-                </li>
-            </div>
-            <div class="message-user-container">
-                <h2 class="section-header">message user</h2>
-                <input id="user-search" type="text" placeholder="Search for User">
-                <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
-                <button type="submit">send</button>
-            </div>
-            <div class="settings-container">
-                <h2 class="section-header">settings</h2>
-                <label for="notification">Send Email Notification
-                    <input id="notification" name="user-notification" type="checkbox" checked>
-                    <span class="slider"></span>
-                </label>
-                <label for="public">Set Profile to Public
-                    <input id="public" name="user-public" type="checkbox" checked>
-                    <span class="slider"></span>
-                </label>
-                <select id="timezone" name="timezone">
-                    <option value="0" selected="selected" hidden>Select Timezone</option>
-                </select>
-                <button type="submit">save</button>
-                <button type="cancel">cancel</button>
+                </div>
+                <div class="message-user-container">
+                    <h2 class="section-header">MESSAGE USER</h2>
+                    <input id="user-search" type="text" placeholder="Search for User">
+                    <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
+                    <button type="submit">send</button>
+                </div>
+                <div id="settings" class="settings-container">
+
+                    <h2 class="section-header">SETTINGS</h2>
+
+                    <label for="notification">
+                        <strong>Send Email Notification</strong>
+                        <input id="notification" name="user-notification" type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+
+                    <label for="public">
+                        <strong>Set Profile to Public</strong>
+                        <input id="public" name="user-public" type="checkbox" checked>
+                        <span class="slider">
+                            <span>ON</span>
+                            <span>OFF</span>
+                        </span>
+                    </label>
+
+                    <select id="timezone" name="timezone">
+                        <option value="0" selected="selected" hidden>Select Timezone</option>
+                    </select>
+
+                    <button type="submit">save</button>
+
+                    <button type="cancel">cancel</button>
+
+                </div>
             </div>
         </main>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
     </body>
 </html>

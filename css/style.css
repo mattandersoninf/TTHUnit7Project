@@ -4,6 +4,7 @@
   font-family: "Roboto", sans-serif;
 }
 
+/* Slider buttons */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -14,11 +15,13 @@
   background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  border-radius: 34px;
+  border-radius: 5px;
+  width: 60px;
+  height: 10px;
 }
 .slider:before {
   position: absolute;
-  content: "";
+  content: "OFF";
   height: 26px;
   width: 26px;
   left: 4px;
@@ -41,6 +44,11 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+/* Grid */
+.grid {
+  display: grid;
 }
 
 /*# sourceMappingURL=style.css.map */
