@@ -4,28 +4,21 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  background-color: aqua;
+}
+
 /* Slider buttons */
 .slider {
-  position: absolute;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: #ccc;
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 5px;
   width: 60px;
-  height: 10px;
+  height: 20px;
 }
 .slider:before {
-  position: absolute;
-  content: "OFF";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
   background-color: white;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -49,6 +42,16 @@ input:checked + .slider:before {
 /* Grid */
 .grid {
   display: grid;
+}
+
+/* _navigation.sass */
+nav {
+  grid-row-start: 2;
+  grid-row-end: 1;
+}
+
+ul {
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */
