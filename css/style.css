@@ -8,6 +8,11 @@ body {
   background-color: aqua;
 }
 
+/* Grid */
+.grid {
+  display: grid;
+}
+
 /* Slider buttons */
 .slider {
   cursor: pointer;
@@ -39,19 +44,54 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Grid */
-.grid {
-  display: grid;
+/* image.sass */
+.sm-img {
+  width: 30px;
+  height: 30px;
+}
+
+.lg-img {
+  width: 100px;
+  height: 100px;
+}
+
+.circle-img {
+  border-radius: 50%;
 }
 
 /* _navigation.sass */
 nav {
   grid-row-start: 2;
-  grid-row-end: 1;
+  grid-row-end: -1;
+}
+
+.nav-item, .nav-item > a {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
+.nav-item img, .nav-item > a img {
+  width: 100%;
+  height: 100%;
 }
 
 ul {
   list-style: none;
+  padding-left: 10px;
+}
+
+/* header */
+.header-container {
+  display: flex;
+  background-color: #8a68ab;
+  margin: 10px;
+  width: 100%;
+}
+.header-container .app-name {
+  float: left;
+}
+.header-container .notification, .header-container .avatar, .header-container .user-name {
+  float: right;
 }
 
 /*# sourceMappingURL=style.css.map */
