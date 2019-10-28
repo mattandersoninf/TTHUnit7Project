@@ -6,6 +6,7 @@
 
 body {
   background-color: aqua;
+  margin: 0 auto;
 }
 
 /* Grid */
@@ -51,15 +52,13 @@ input:checked + .slider:before {
 }
 
 .lg-img {
-  width: 100px;
-  height: 100px;
-  margin-top: 25px;
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  margin-top: 35px;
 }
 
 .svg-facebook, .svg-google, .svg-twitter {
-  width: 100px;
-  height: 100px;
-  cx: 100px;
   background-color: #8a68ab;
   border-radius: 50%;
 }
@@ -76,6 +75,7 @@ input:checked + .slider:before {
 nav {
   grid-row-start: 2;
   grid-row-end: -1;
+  background-color: #553482;
 }
 
 .nav-item, .nav-item > a {
@@ -96,15 +96,27 @@ ul {
 /* header */
 .header-container {
   display: flex;
-  background-color: #8a68ab;
-  margin: 10px;
   width: 100%;
+  height: 100%;
 }
 .header-container .app-name {
   float: left;
 }
 .header-container .notification, .header-container .avatar, .header-container .user-name {
   float: right;
+}
+
+header {
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #8a68ab;
+  color: white;
+}
+
+.user-name, .avatar, .notification {
+  margin-right: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
