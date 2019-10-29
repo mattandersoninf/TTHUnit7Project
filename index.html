@@ -5,6 +5,9 @@
         <title>tth-unit-7-project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Matthew Anderson">
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src = "js/app.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     </head>
@@ -35,7 +38,34 @@
                         <li></li>
                         <li></li>
                     </ul>
-                    <!-- Insert line graph-->
+                    <div class="traffic-chart-container">
+                        <canvas id="traffic-chart"></canvas>
+                        <script>
+                            let myChart = document.getElementById('traffic-chart').getContext('2d');
+                            let lineChart = new Chart(myChart{
+                                type: 'line',
+                                data: {
+                                    labels:['16-22','23-29','30-5','6=12','13-19','20-26','27-3','4-10','11-17','18-24','25-31'],
+                                    datasets:[
+                                        label: 'Traffic',
+                                        data:['500',
+                                              '1000',
+                                              '750',
+                                              '1250',
+                                              '1750',
+                                              '1250',
+                                              '1500',
+                                              '1000',
+                                              '1500',
+                                              '2000',
+                                              '1500',
+                                              '2000']
+                                    ]
+                                },
+                                options:{}
+                            });
+                        </script>
+                    </div>
                 </div>
                 <div class="daily-traffic-container">
                     <h2 class="section-header">DAILY TRAFFIC</h2>
@@ -143,6 +173,5 @@
                 </div>
             </div>
         </main>
-        <script src="https://d3js.org/d3.v5.min.js"></script>
     </body>
 </html>
