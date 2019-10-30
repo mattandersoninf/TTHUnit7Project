@@ -27,6 +27,10 @@ header {
   display: grid;
 }
 
+.wrapper {
+  grid-column-start: 2;
+}
+
 /* Slider buttons */
 .slider {
   cursor: pointer;
@@ -58,20 +62,20 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
+/* chart */
 .traffic-chart-container {
   width: 90%;
+}
+
+#traffic-chart {
+  width: 100%;
+  height: 400px;
 }
 
 /* image.sass */
 .sm-img {
   width: 30px;
   height: 30px;
-}
-
-.lg-img {
-  width: 80px;
-  height: 80px;
-  margin: 35px 10px;
 }
 
 .svg-facebook, .svg-google, .svg-twitter {
@@ -85,23 +89,37 @@ input:checked + .slider:before {
   background-color: #e3e3e3;
   border-radius: 20px;
   margin: 10px auto;
+  display: flex;
+}
+.social-stat-container > .lg-img {
+  width: 80px;
+  height: 80px;
+  margin: 35px 10px;
+}
+.social-stat-container > .social-stat-text-container {
+  float: right;
+  margin: 10px;
 }
 
 /* _navigation.sass */
 nav {
-  grid-row-start: 2;
+  grid-row-start: 1;
   grid-row-end: -1;
-  background-color: #553482;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-color: #443575;
+  width: 60px;
 }
 
-.nav-item, .nav-item > a {
+.nav-item {
   width: 30px;
   height: 30px;
-  margin: 10px;
+  margin: 0 10px;
 }
-.nav-item img, .nav-item > a img {
+.nav-item img {
   width: 100%;
   height: 100%;
+  padding-bottom: 10px;
 }
 
 ul {
@@ -116,15 +134,9 @@ ul {
   height: 100%;
   margin: auto 10px;
 }
-.header-container .app-name {
-  float: left;
-}
-.header-container .notification, .header-container .avatar, .header-container .user-name {
-  float: right;
-}
 
 .user-name, .avatar, .notification {
-  margin-right: 5px;
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

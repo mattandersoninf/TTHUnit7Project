@@ -5,9 +5,7 @@
         <title>tth-unit-7-project</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Matthew Anderson">
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
         <script src="https://d3js.org/d3.v5.min.js"></script>
-        <script src = "js/app.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     </head>
@@ -30,148 +28,150 @@
                         <li class="nav-item"><a href="#settings"><img class="sm-img" src="icons/icon-settings.svg" class="nav-svg" alt="settings"></a></li>
                     </ul>
                 </nav>
-                <div class="traffic-container">
-                    <h2 class="section-header">TRAFFIC</h2>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                    <div class="traffic-chart-container">
-                        <canvas id="traffic-chart"></canvas>
-                        <script>
-                            let myChart = document.getElementById('traffic-chart').getContext('2d');
-                            let lineChart = new Chart(myChart{
-                                type: 'line',
-                                data: {
-                                    labels:['16-22','23-29','30-5','6=12','13-19','20-26','27-3','4-10','11-17','18-24','25-31'],
-                                    datasets:[
-                                        label: 'Traffic',
-                                        data:['500',
-                                              '1000',
-                                              '750',
-                                              '1250',
-                                              '1750',
-                                              '1250',
-                                              '1500',
-                                              '1000',
-                                              '1500',
-                                              '2000',
-                                              '1500',
-                                              '2000']
-                                    ]
-                                },
-                                options:{}
-                            });
-                        </script>
+                <div class="wrapper">
+                    <div class="dashboard-header-container">
+                        <h1><b>Dashboard</b></h1>
                     </div>
-                </div>
-                <div class="daily-traffic-container">
-                    <h2 class="section-header">DAILY TRAFFIC</h2>
-                    <!-- insert bar graph-->
-                </div>
-                <div id="users" class="mobile-user-container">
-                    <h2 class="section-header">MOBILE USERS</h2>
-                    <!-- insert circle graph-->
-                </div>
-                <div class="social-stats-container">
-                    <h2 class="section-header">SOCIAL STATS</h2>
-                    <div class="social-stat-container twitter">
-                        <img src="icons/icon-twitter.svg" alt="twitter" class="lg-img circle-img svg-twitter">
+                    <div class="search-container">
+                        <input type="text" placeholder="Search">
                     </div>
-                    <div class="social-stat-container facebook">
-                        <img src="icons/icon-facebook.svg" alt="facebook" class="lg-img circle-img svg-facebook">
+                    <div class="alert-container"></div>
+                    <div class="traffic-container">
+                        <h2 class="section-header">TRAFFIC</h2>
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                        <div class="traffic-chart-container">
+                            <canvas id="traffic-chart"></canvas>
+                        </div>
                     </div>
-                    <div class="social-stat-container google">
-                        <img src="icons/icon-google-plus.svg" alt="google" class="lg-img circle-img svg-google">
+                    <div class="daily-traffic-container">
+                        <h2 class="section-header">DAILY TRAFFIC</h2>
+                        <div class="daily-chart-container">
+                            <canvas id="daily-chart"></canvas>
+                        </div>
                     </div>
-                </div>
-                <div class="new-user-container">
-                    <h2 class="section-header">NEW MEMBERS</h2>
-                    <ul class="new-user-list">
-                        <li class="new-user">
-                            <img src="images/member-1.jpg" alt="member-1" class="sm-img">
-                            <div class="new-user-name"></div>
-                            <div class=""new-user-email></div>
-                        </li>
-                        <li class="new-user">
-                            <img src="images/member-2.jpg" alt="member-2" class="sm-img">
-                            <div class="new-user-name"></div>
-                            <div class=""new-user-email></div>
-                        </li>
-                        <li class="new-user">
-                            <img src="images/member-3.jpg" alt="member-3" class="sm-img">
-                            <div class="new-user-name"></div>
-                            <div class=""new-user-email></div>
-                        </li>
-                        <li class="new-user">
-                            <img src="images/member-4.jpg" alt="member-4" class="sm-img">
-                            <div class="new-user-name"></div>
-                            <div class=""new-user-email></div>
-                        </li>
-                    </ul>
-                </div>
-                <div id="visits" class="recent-activity-container">
-                    <h2 class="section-header">RECENT ACTIVITY</h2>
-                    <ul>
-                        <li class="new-user-activity">
-                            <img src="images/member-1.jpg" alt="member-1" class="sm-img">
-                            <div class="new-user-activity-description"></div>
-                            <div class="new-user-activity-time"></div>
-                        </li>
-                        <li class="new-user-activity">
-                            <img src="images/member-2.jpg" alt="member-1" class="sm-img">
-                            <div class="new-user-activity-description"></div>
-                            <div class="new-user-activity-time"></div>
-                        </li>
-                        <li class="new-user-activity">
-                            <img src="images/member-3.jpg" alt="member-1" class="sm-img">
-                            <div class="new-user-activity-description"></div>
-                            <div class="new-user-activity-time"></div>
-                        </li>
-                        <li class="new-user-activity">
-                            <img src="images/member-4.jpg" alt="member-1" class="sm-img">
-                            <div class="new-user-activity-description"></div>
-                            <div class="new-user-activity-time"></div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="message-user-container">
-                    <h2 class="section-header">MESSAGE USER</h2>
-                    <input id="user-search" type="text" placeholder="Search for User">
-                    <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
-                    <button type="submit">send</button>
-                </div>
-                <div id="settings" class="settings-container">
+                    <div id="users" class="mobile-user-container">
+                        <h2 class="section-header">MOBILE USERS</h2>
+                        <div class="mobile-chart-container">
+                            <canvas id="mobile-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="social-stats-container">
+                        <h2 class="section-header">SOCIAL STATS</h2>
+                        <div class="social-stat-container twitter">
+                            <img src="icons/icon-twitter.svg" alt="twitter" class="lg-img circle-img svg-twitter">
+                            <div class="social-stat-text-container">
+                                <h3 class="social-stat-name">Twitter</h3>
+                                <p class="social-stat-count">10,345</p>
+                            </div>
+                        </div>
+                        <div class="social-stat-container facebook">
+                            <img src="icons/icon-facebook.svg" alt="facebook" class="lg-img circle-img svg-facebook">
+                            <div class="social-stat-text-container">
+                                <h3 class="social-stat-name">Facebook</h3>
+                                <p class="social-stat-count">8,739</p>
+                            </div>
+                        </div>
+                        <div class="social-stat-container google">
+                            <img src="icons/icon-google-plus.svg" alt="google" class="lg-img circle-img svg-google">
+                            <div class="social-stat-text-container">
+                                <h3 class="social-stat-name">Google+</h3>
+                                <p class="social-stat-count">2,530</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-user-container">
+                        <h2 class="section-header">NEW MEMBERS</h2>
+                        <ul class="new-user-list">
+                            <li class="new-user">
+                                <img src="images/member-1.jpg" alt="member-1" class="sm-img">
+                                <div class="new-user-name"></div>
+                                <div class=""new-user-email></div>
+                            </li>
+                            <li class="new-user">
+                                <img src="images/member-2.jpg" alt="member-2" class="sm-img">
+                                <div class="new-user-name"></div>
+                                <div class=""new-user-email></div>
+                            </li>
+                            <li class="new-user">
+                                <img src="images/member-3.jpg" alt="member-3" class="sm-img">
+                                <div class="new-user-name"></div>
+                                <div class=""new-user-email></div>
+                            </li>
+                            <li class="new-user">
+                                <img src="images/member-4.jpg" alt="member-4" class="sm-img">
+                                <div class="new-user-name"></div>
+                                <div class=""new-user-email></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="visits" class="recent-activity-container">
+                        <h2 class="section-header">RECENT ACTIVITY</h2>
+                        <ul>
+                            <li class="new-user-activity">
+                                <img src="images/member-1.jpg" alt="member-1" class="sm-img">
+                                <div class="new-user-activity-description"></div>
+                                <div class="new-user-activity-time"></div>
+                            </li>
+                            <li class="new-user-activity">
+                                <img src="images/member-2.jpg" alt="member-1" class="sm-img">
+                                <div class="new-user-activity-description"></div>
+                                <div class="new-user-activity-time"></div>
+                            </li>
+                            <li class="new-user-activity">
+                                <img src="images/member-3.jpg" alt="member-1" class="sm-img">
+                                <div class="new-user-activity-description"></div>
+                                <div class="new-user-activity-time"></div>
+                            </li>
+                            <li class="new-user-activity">
+                                <img src="images/member-4.jpg" alt="member-1" class="sm-img">
+                                <div class="new-user-activity-description"></div>
+                                <div class="new-user-activity-time"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="message-user-container">
+                        <h2 class="section-header">MESSAGE USER</h2>
+                        <input id="user-search" type="text" placeholder="Search for User">
+                        <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
+                        <button type="submit">send</button>
+                    </div>
+                    <div id="settings" class="settings-container">
 
-                    <h2 class="section-header">SETTINGS</h2>
+                        <h2 class="section-header">SETTINGS</h2>
 
-                    <label for="notification">
-                        <strong>Send Email Notification</strong>
-                        <input id="notification" name="user-notification" type="checkbox" checked>
-                        <span class="slider"></span>
-                    </label>
+                        <label for="notification">
+                            <strong>Send Email Notification</strong>
+                            <input id="notification" name="user-notification" type="checkbox" checked>
+                            <span class="slider"></span>
+                        </label>
 
-                    <label for="public">
-                        <strong>Set Profile to Public</strong>
-                        <input id="public" name="user-public" type="checkbox" checked>
-                        <span class="slider">
-                            <span>ON</span>
-                            <span>OFF</span>
-                        </span>
-                    </label>
+                        <label for="public">
+                            <strong>Set Profile to Public</strong>
+                            <input id="public" name="user-public" type="checkbox" checked>
+                            <span class="slider">
+                                <span>ON</span>
+                                <span>OFF</span>
+                            </span>
+                        </label>
 
-                    <select id="timezone" name="timezone">
-                        <option value="0" selected="selected" hidden>Select Timezone</option>
-                    </select>
+                        <select id="timezone" name="timezone">
+                            <option value="0" selected="selected" hidden>Select Timezone</option>
+                        </select>
 
-                    <button type="submit">save</button>
+                        <button type="submit">save</button>
 
-                    <button type="cancel">cancel</button>
+                        <button type="cancel">cancel</button>
 
+                    </div>
                 </div>
             </div>
         </main>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <script src = "js/app.js"></script>
     </body>
 </html>
