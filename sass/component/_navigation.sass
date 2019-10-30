@@ -1,22 +1,15 @@
 /* _navigation.sass */
 
 .main-nav
-  grid-row-start: 1
-  grid-row-end: -1
-  grid-column-start: 1
-  grid-column-end: 2
   background-color: $main-nav-bckgrnd-color
-  width: 1fr
   padding: $gutter-space
   margin: 0
 
-
 .nav-item
-  width: 80%
-  max-width: 50px
   margin: $gutter-space auto
-  > a
-    width: 100%
+  float: left
+  padding: 0.5rem
+  max-width: 72px
 
   img
     width: 100%
@@ -24,7 +17,9 @@
     padding-bottom: $gutter-space
 
 ul
+  display: flex
+  justify-content: space-evenly
   list-style: none
-  padding-left: 0
-  margin: $gutter-space auto
+  margin: 0
+  padding: 0
 
