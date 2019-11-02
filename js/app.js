@@ -39,35 +39,35 @@ let lineChart = new Chart(trafficChart, {
 let barChart = new Chart(dailyChart, {
     type: 'bar',
     data:{
-        labels:[],
-        backgroundColor: #8a68ab,
-        datasets:[{
-            label: 'Daily Traffic',
-            data:[
-                '50',
-                '75',
-                '150',
-                '100',
-                '200',
-                '175',
-                '75']
-        }]
+        labels:['S','M','T','W','T','F','S'],
+        datasets:[
+            {
+                backgroundColor: '#8A68AB',
+                data:[
+                    '50',
+                    '75',
+                    '150',
+                    '100',
+                    '200',
+                    '175',
+                    '75']
+            }
+            ]
     },
     options:{}
 });
 
 
-let circleChart = new Chart(mobileChart, {
-    type: 'circle',
+let doughnutChart = new Chart(mobileChart, {
+    type: 'doughnut',
     data:{
-        labels:[],
-        backgroundColor: #8a68ab,
+        labels:['Phones','Tablets','Desktop'],
         datasets:[{
-            label: 'Mobile Users',
+            backgroundColor: ['#639ddb','#63db83','#8A68AB'],
             data:[
-                '70',
                 '15',
-                '15'
+                '15',
+                '70'
                 ]
         }]
     },

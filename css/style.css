@@ -104,6 +104,7 @@ input:checked + .slider:before {
 #traffic-chart, #daily-chart, #mobile-chart {
   width: 100%;
   height: 400px;
+  max-width: 400px;
 }
 
 /* image.sass */
