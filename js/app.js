@@ -1,6 +1,17 @@
 /* app.js */
+/* WARNING: the chart object will not be recognized until the Chart script in the html file calls it*/
 
+
+// traffic chart element
 const trafficChart = document.getElementById('traffic-chart').getContext('2d');
+
+// daily chart element
+const dailyChart = document.getElementById('daily-chart').getContext('2d');
+
+// mobile chart element
+const mobileChart = document.getElementById('mobile-chart').getContext('2d');
+
+
 let lineChart = new Chart(trafficChart, {
     type: 'line',
     data: {
@@ -22,4 +33,36 @@ let lineChart = new Chart(trafficChart, {
         }]
     },
     options:{}
+});
+
+
+let barChart = new Chart(dailyChart, {
+    type: 'bar',
+    data:{
+        label: 'Daily Traffic',
+        backgroundColor: #8a68ab,
+        datasetsdata:['50',
+              '75',
+              '150',
+              '100',
+              '200',
+              '175',
+              '75']
+        }]
+    },
+    options:{}
+});
+
+
+let circleChart = new Chart(mobileChart, {
+    type: 'circle',
+    datasets[{
+        label: 'Mobile Users',
+        data:[
+            '70',
+            '15',
+            '15'
+        ]
+    }],
+    options: {}
 });
