@@ -1,3 +1,4 @@
+/* typography */
 @import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
 * {
   box-sizing: border-box;
@@ -22,26 +23,6 @@ header {
   color: white;
 }
 
-#main-search {
-  display: block;
-  margin: 0 auto;
-}
-
-input[id=text] {
-  text-align: right;
-  font-style: italic;
-  padding-right: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 3px solid #5294ff;
-  border-radius: 0.3em;
-  font-size: 16px;
-  color: #8a97a0;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
-  width: 30%;
-  max-width: 300px;
-  min-width: 120px;
-}
-
 input:focus {
   background: #4d4d4d;
   color: white;
@@ -53,7 +34,7 @@ input:focus {
   display: flex;
   width: 100%;
   margin: auto 10px;
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .user-name, .avatar, .notification {
@@ -63,9 +44,10 @@ input:focus {
 /* Grid */
 .grid {
   display: grid;
+  margin: auto 0;
 }
 
-/* Slider buttons */
+/* buttons and input fields */
 .slider {
   cursor: pointer;
   background-color: #ccc;
@@ -94,6 +76,29 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+.search-container {
+  margin: 10px 0;
+  padding: 10px 0;
+  border-radius: 5px;
+  background-color: #e3e3e3;
+}
+
+#main-search {
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px solid #5294ff;
+  border-radius: 0.3em;
+  font-size: 16px;
+  background-color: white;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  padding: 3px;
+  width: 30%;
+  max-width: 300px;
+  min-width: 120px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* chart */

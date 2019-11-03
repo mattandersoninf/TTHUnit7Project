@@ -1,4 +1,4 @@
-/* Slider buttons */
+/* buttons and input fields */
 
 .slider
   cursor: pointer
@@ -27,5 +27,28 @@ input:checked + .slider:before
   -webkit-transform: translateX(26px)
   -ms-transform: translateX(26px)
   transform: translateX(26px)
+
+
+.search-container
+  @include std-space
+  border-radius: 5px
+  background-color: $light-gray
+
+
+#main-search
+  background: rgba(255,255,255,0.1)
+  border: 3px solid  #5294ff
+  border-radius: .3em
+  font-size: 16px
+  background-color: white
+  color: #8a97a0
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset
+  padding: 3px
+  width: 30%
+  max-width: 300px
+  min-width: 120px
+  display: block
+  margin: 0 auto
+
 
 
