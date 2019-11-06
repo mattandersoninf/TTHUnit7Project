@@ -32,6 +32,7 @@ input:focus {
 /* header */
 .header-container {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   margin: auto 10px;
   padding: 10px 0;
@@ -46,7 +47,7 @@ input:focus {
   float: right;
 }
 
-/* Grid */
+/* grid */
 .grid {
   display: grid;
   margin: auto 0;
@@ -117,7 +118,7 @@ input:checked + .slider:before {
   max-width: 400px;
 }
 
-/* image.sass */
+/* image */
 .sm-img {
   width: 30px;
   height: 30px;
@@ -126,27 +127,29 @@ input:checked + .slider:before {
 .svg-facebook, .svg-google, .svg-twitter {
   background-color: #8a68ab;
   border-radius: 50%;
+  padding: 10px;
 }
 
 .social-stat-container {
   width: 90%;
-  height: 150px;
   background-color: #e3e3e3;
   border-radius: 20px;
   margin: 10px auto;
   display: flex;
+  justify-content: space-evenly;
+  padding: 3px;
 }
 .social-stat-container > .lg-img {
   width: 80px;
   height: 80px;
-  margin: 35px 10px;
+  margin: 35px;
 }
 .social-stat-container > .social-stat-text-container {
   float: right;
-  margin: 10px;
+  margin: auto;
 }
 
-/* _navigation.sass */
+/* navigation */
 .main-nav {
   background-color: #443575;
   padding: 10px;

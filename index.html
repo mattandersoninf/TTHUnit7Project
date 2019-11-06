@@ -10,16 +10,18 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     </head>
     <body>
-        <header>
-            <div class="header-container">
-                <div class="app-name"><b>Your</b>App<sup>TM</sup></div>
-                <div class="notification"><img class="sm-img circle-img" src="icons/icon-bell.svg" alt="bell"></div>
-                <div class="avatar"><img src="images/member-5.jpg" alt="avatar" class="sm-img circle-img"></div>
-                <div class="user-name">Josh Sullivan</div>
-            </div>
-        </header>
-        <main>
-            <div class = grid>
+        <div class = grid>
+            <header>
+                <div class="header-container">
+                    <div class="app-name"><b>Your</b>App<sup>TM</sup></div>
+                    <div class="profile-container">
+                        <div class="notification"><img class="sm-img circle-img" src="icons/icon-bell.svg" alt="bell"></div>
+                        <div class="avatar"><img src="images/member-5.jpg" alt="avatar" class="sm-img circle-img"></div>
+                        <div class="user-name">Josh Sullivan</div>
+                    </div>
+                </div>
+            </header>
+            <main>
                 <nav class="main-nav">
                     <ul>
                         <li class="nav-item"><a href="#"><img class="sm-img" src="icons/icon-dashboard.svg" class="nav-svg" alt="dashboard"></a></li>
@@ -63,21 +65,27 @@
                     <div class="social-stats-container">
                         <h2 class="section-header">SOCIAL STATS</h2>
                         <div class="social-stat-container twitter">
-                            <img src="icons/icon-twitter.svg" alt="twitter" class="lg-img circle-img svg-twitter">
+                            <div class="social-stat-img-container">
+                                <img src="icons/icon-twitter.svg" alt="twitter" class="lg-img circle-img svg-twitter">
+                            </div>
                             <div class="social-stat-text-container">
                                 <h3 class="social-stat-name">Twitter</h3>
                                 <p class="social-stat-count">10,345</p>
                             </div>
                         </div>
                         <div class="social-stat-container facebook">
-                            <img src="icons/icon-facebook.svg" alt="facebook" class="lg-img circle-img svg-facebook">
+                            <div class="social-stat-img-container">
+                                <img src="icons/icon-facebook.svg" alt="facebook" class="lg-img circle-img svg-facebook">
+                            </div>
                             <div class="social-stat-text-container">
                                 <h3 class="social-stat-name">Facebook</h3>
                                 <p class="social-stat-count">8,739</p>
                             </div>
                         </div>
                         <div class="social-stat-container google">
-                            <img src="icons/icon-google-plus.svg" alt="google" class="lg-img circle-img svg-google">
+                            <div class="social-stat-img-container">
+                                <img src="icons/icon-google-plus.svg" alt="google" class="lg-img circle-img svg-google">
+                            </div>
                             <div class="social-stat-text-container">
                                 <h3 class="social-stat-name">Google+</h3>
                                 <p class="social-stat-count">2,530</p>
@@ -169,9 +177,9 @@
 
                     </div>
                 </div>
-            </div>
-        </main>
-        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-        <script src = "js/app.js"></script>
+            </main>
+            <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+            <script src = "js/app.js"></script>
+        </div>
     </body>
 </html>
