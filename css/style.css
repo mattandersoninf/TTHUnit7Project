@@ -42,9 +42,13 @@ input:focus {
   float: left;
 }
 
+.profile-container {
+  margin: auto 10px;
+}
+
 .user-name, .avatar, .notification {
-  margin-right: 0;
   float: right;
+  margin: auto 10px;
 }
 
 /* grid */
@@ -137,12 +141,13 @@ input:checked + .slider:before {
   margin: 10px auto;
   display: flex;
   justify-content: space-evenly;
-  padding: 3px;
+  padding: 10px;
+  max-width: 320px;
 }
 .social-stat-container > .lg-img {
-  width: 80px;
-  height: 80px;
-  margin: 35px;
+  width: 75px;
+  height: 75px;
+  margin: auto;
 }
 .social-stat-container > .social-stat-text-container {
   float: right;
