@@ -14,6 +14,13 @@ html, body {
   text-align: center;
 }
 
+input:focus {
+  background: #4d4d4d;
+  color: white;
+  transition: 300ms;
+}
+
+/* header */
 header {
   height: 50px;
   margin: 0 auto;
@@ -23,13 +30,6 @@ header {
   color: white;
 }
 
-input:focus {
-  background: #4d4d4d;
-  color: white;
-  transition: 300ms;
-}
-
-/* header */
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -48,13 +48,23 @@ input:focus {
 
 .user-name, .avatar, .notification {
   float: right;
-  margin: auto 10px;
+  margin: auto;
 }
 
 /* grid */
 .grid {
   display: grid;
   margin: auto 0;
+}
+
+#visits, #settings {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.settings-button-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* buttons and input fields */
@@ -109,6 +119,51 @@ input:checked + .slider:before {
   min-width: 120px;
   display: block;
   margin: 0 auto;
+}
+
+input[id=user-search],
+textarea {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #707070;
+  border-radius: 0.3em;
+  font-size: 16px;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  padding: 10px;
+  margin: 10px auto;
+  width: 100%;
+}
+
+input[id=user-search]:focus,
+textarea:focus {
+  background: #4d4d4d;
+  color: white;
+  transition: 300ms;
+}
+
+.message-user-container > button, .settings-container > .settings-button-container > button, .settings-container > select {
+  padding: 20px 0.3em 20px 0.3em;
+  color: white;
+  background-color: #8a68ab;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  border: 1px solid #443575;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.message-user-container > button {
+  width: 100%;
+}
+
+.settings-container > .settings-button-container > button {
+  width: 45%;
 }
 
 /* chart */
