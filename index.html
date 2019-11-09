@@ -136,40 +136,46 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="message-user-container">
-                        <h2 class="section-header">MESSAGE USER</h2>
-                        <input id="user-search" type="text" placeholder="Search for User">
-                        <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
-                        <button type="submit">send</button>
-                    </div>
-                    <div id="settings" class="settings-container">
+                    <form>
+                        <fieldset>
+                            <div class="message-user-container">
+                                <h2 class="section-header">MESSAGE USER</h2>
+                                <input id="user-search" type="text" placeholder="Search for User">
+                                <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
+                                <button type="submit">send</button>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div id="settings" class="settings-container">
 
-                        <h2 class="section-header">SETTINGS</h2>
+                                <h2 class="section-header">SETTINGS</h2>
 
-                        <label for="notification">
-                            <strong>Send Email Notification</strong>
-                            <input id="notification" name="user-notification" type="checkbox" checked>
-                            <span class="slider"></span>
-                        </label>
+                                <label for="notification">
+                                    <strong>Send Email Notification</strong>
+                                    <input id="notification" name="user-notification" type="checkbox" checked>
+                                    <span class="slider"></span>
+                                </label>
 
-                        <label for="public">
-                            <strong>Set Profile to Public</strong>
-                            <input id="public" name="user-public" type="checkbox" checked>
-                            <span class="slider">
+                                <label for="public">
+                                    <strong>Set Profile to Public</strong>
+                                    <input id="public" name="user-public" type="checkbox" checked>
+                                    <span class="slider">
                                 <span>ON</span>
                                 <span>OFF</span>
                             </span>
-                        </label>
+                                </label>
 
-                        <select id="timezone" name="timezone">
-                            <option value="0" selected="selected" hidden>Select Timezone</option>
-                        </select>
-                        <div class="settings-button-container">
-                            <button type="submit">save</button>
-                            <button type="cancel">cancel</button>
-                        </div>
+                                <select id="timezone" name="timezone">
+                                    <option value="0" selected="selected" hidden>Select Timezone</option>
+                                </select>
+                                <div class="settings-button-container">
+                                    <button type="submit">save</button>
+                                    <button type="cancel">cancel</button>
+                                </div>
 
-                    </div>
+                            </div>
+                        </fieldset>
+                    </form>
                 </div>
             </main>
             <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
