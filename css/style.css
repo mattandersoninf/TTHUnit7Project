@@ -57,7 +57,7 @@ header {
   margin: auto 0;
 }
 
-#visits, #settings {
+#visits, #settings, .message-user-container, .settings-container {
   width: 90%;
   margin: 10px auto;
 }
