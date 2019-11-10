@@ -144,21 +144,25 @@
                     </div>
                     <div id="settings" class="settings-container">
                         <h2 class="section-header">SETTINGS</h2>
-                        <label for="notification">
-                            <strong>Send Email Notification</strong>
+                        <strong>Send Email Notification</strong>
+                        <label for="notification" class="switch">
                             <input id="notification" name="user-notification" type="checkbox" checked>
                             <span class="slider">
                                 <span>ON</span>
                                 <span>OFF</span>
                             </span>
                         </label>
-                        <label for="public">
-                            <strong>Set Profile to Public</strong>
-                            <input id="public" name="user-public" type="checkbox" checked>
-                            <span class="slider">
-                                <span>ON</span>
-                                <span>OFF</span>
-                            </span>
+                        <strong>Set Profile to Public</strong>
+                        <label for="public" class="switch">
+                            <input id="public" name="user-public" type="checkbox">
+                            <div class="slide">
+                                <span class="slider">
+                                    <!--
+                                    <span>ON</span>
+                                    <span>OFF</span>
+                                    -->
+                                </span>
+                            </div>
                         </label>
                         <select id="timezone" name="timezone">
                             <option value="0" selected="selected" hidden>Select Timezone</option>
