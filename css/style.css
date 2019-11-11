@@ -68,25 +68,41 @@ header {
 }
 
 /* buttons and input fields */
-.switch {
-  width: 60px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: #ccc;
+.traffic-toggle-container {
+  margin: 10px 0;
+  padding: 10px 0;
 }
-.switch input {
-  position: relative;
-  width: 100%;
-  height: 24px;
-  display: none;
-  cursor: pointer;
+.traffic-toggle-container .switch-ios.switch-toggle {
+  background-color: white;
+  box-shadow: inset rgba(0, 0, 0, 0) 0 1px 0;
 }
-.switch > .slide {
-  width: 100%;
-  height: 100%;
-  border: 3px solid #000;
-  border-radius: 3px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+.settings-container {
+  display: block;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.settings-container label {
+  width: 35%;
+  max-width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 2%;
+  float: left;
+}
+.settings-container strong {
+  width: 55%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  float: left;
+}
+.settings-container .switch-ios.switch-light input:checked ~ span {
+  border-color: #8a68ab;
+  box-shadow: inset 0 0 0 30px #8a68ab;
+}
+.settings-container .switch-ios.switch-light input:checked ~ span a {
+  border-color: #8a68ab;
 }
 
 .search-container {
@@ -113,6 +129,7 @@ header {
 }
 
 input[id=user-search],
+select,
 textarea {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid #707070;
@@ -127,26 +144,36 @@ textarea {
 }
 
 input[id=user-search]:focus,
+select:focus,
 textarea:focus {
   background: #4d4d4d;
   color: white;
   transition: 300ms;
 }
 
-.message-user-container > button, .settings-container > .settings-button-container > button, .settings-container > select {
+.message-user-container > button, .settings-container > .settings-button-container > button {
   padding: 20px 0.3em 20px 0.3em;
-  color: white;
-  background-color: #8a68ab;
   font-size: 18px;
   text-align: center;
   font-style: normal;
   border-radius: 5px;
-  border: 1px solid #443575;
+  border: 1px solid;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
   margin-bottom: 10px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.message-user-container > button, .settings-container > .settings-button-container > button:first-of-type {
+  background-color: #8a68ab;
+  border-color: #443575;
+  color: white;
+}
+
+.settings-container > .settings-button-container > button:last-of-type {
+  background-color: #e8eeef;
+  color: #8a97a0;
 }
 
 .message-user-container > button {

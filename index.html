@@ -41,12 +41,24 @@
                     <div class="alert-container"></div>
                     <div class="traffic-container">
                         <h2 class="section-header">TRAFFIC</h2>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
+                        <div class="traffic-toggle-container">
+                            <div class="switch-toggle switch-ios">
+
+                                <input id="hour" name="view" type="radio">
+                                <label for="hour" onclick="">Hourly</label>
+
+                                <input id="day" name="view" type="radio">
+                                <label for="day" onclick="">Daily</label>
+
+                                <input id="week" name="view" type="radio" checked>
+                                <label for="week" onclick="">Weekly</label>
+
+                                <input id="month" name="view" type="radio">
+                                <label for="month" onclick="">Monthly</label>
+
+                                <a></a>
+                            </div>
+                        </div>
                         <div class="traffic-chart-container">
                             <canvas id="traffic-chart"></canvas>
                         </div>
@@ -146,23 +158,25 @@
                     <div id="settings" class="settings-container">
                         <h2 class="section-header">SETTINGS</h2>
                         <strong>Send Email Notification</strong>
-                        <label class="switch-light switch-candy" onclick="">
+                        <label class="switch-light switch-ios" onclick="">
                             <input type="checkbox">
                             <span>
-                                <span>On</span>
                                 <span>Off</span>
+                                <span>On</span>
                                 <a></a>
                               </span>
                         </label>
+                        <br>
                         <strong>Set Profile to Public</strong>
-                        <label class="switch-light switch-candy" onclick="">
+                        <label class="switch-light switch-ios" onclick="">
                             <input type="checkbox">
                             <span>
-                                <span>On</span>
                                 <span>Off</span>
+                                <span>On</span>
                                 <a></a>
                               </span>
                         </label>
+                        <br>
                         <select id="timezone" name="timezone">
                             <option value="0" selected="selected" hidden>Select Timezone</option>
                             <option value="GMT">GMT</option>
