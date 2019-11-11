@@ -7,6 +7,7 @@
         <meta name="author" content="Matthew Anderson">
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- Use for the toggle switch -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     </head>
     <body>
@@ -145,24 +146,22 @@
                     <div id="settings" class="settings-container">
                         <h2 class="section-header">SETTINGS</h2>
                         <strong>Send Email Notification</strong>
-                        <label for="notification" class="switch">
-                            <input id="notification" name="user-notification" type="checkbox" checked>
-                            <span class="slider">
-                                <span>ON</span>
-                                <span>OFF</span>
-                            </span>
+                        <label class="switch-light switch-candy" onclick="">
+                            <input type="checkbox">
+                            <span>
+                                <span>On</span>
+                                <span>Off</span>
+                                <a></a>
+                              </span>
                         </label>
                         <strong>Set Profile to Public</strong>
-                        <label for="public" class="switch">
-                            <input id="public" name="user-public" type="checkbox">
-                            <div class="slide">
-                                <span class="slider">
-                                    <!--
-                                    <span>ON</span>
-                                    <span>OFF</span>
-                                    -->
-                                </span>
-                            </div>
+                        <label class="switch-light switch-candy" onclick="">
+                            <input type="checkbox">
+                            <span>
+                                <span>On</span>
+                                <span>Off</span>
+                                <a></a>
+                              </span>
                         </label>
                         <select id="timezone" name="timezone">
                             <option value="0" selected="selected" hidden>Select Timezone</option>
