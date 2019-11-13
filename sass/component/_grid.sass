@@ -4,9 +4,18 @@
   display: grid
   margin: auto 0
 
-#visits, #settings, .message-user-container
+#visits, #settings, .message-user-container, .new-user-container
   width: 90%
   margin: $gutter-space auto
+
+.new-user, .new-user-activity
+  margin: $gutter-space auto
+  & > div, & > img
+    margin: $gutter-space auto
+    text-align: center
+
+.circle-img
+  border-radius: 50%
 
 .settings-button-container
   display: flex

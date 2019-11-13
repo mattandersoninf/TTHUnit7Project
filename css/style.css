@@ -57,9 +57,21 @@ header {
   margin: auto 0;
 }
 
-#visits, #settings, .message-user-container {
+#visits, #settings, .message-user-container, .new-user-container {
   width: 90%;
   margin: 10px auto;
+}
+
+.new-user, .new-user-activity {
+  margin: 10px auto;
+}
+.new-user > div, .new-user > img, .new-user-activity > div, .new-user-activity > img {
+  margin: 10px auto;
+  text-align: center;
+}
+
+.circle-img {
+  border-radius: 50%;
 }
 
 .settings-button-container {
@@ -196,9 +208,15 @@ textarea:focus {
 }
 
 /* image */
-.sm-img {
+.user-img {
   width: 30px;
   height: 30px;
+}
+
+.sm-img .circle-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .svg-facebook, .svg-google, .svg-twitter {
