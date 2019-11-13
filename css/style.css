@@ -57,9 +57,12 @@ header {
   margin: auto 0;
 }
 
+.grid-line {
+  border: 1px solid #adadad;
+}
+
 #visits, #settings, .message-user-container, .new-user-container {
-  width: 90%;
-  margin: 10px auto;
+  width: 100%;
 }
 
 .new-user, .new-user-activity {
@@ -91,8 +94,6 @@ header {
 
 .settings-container {
   display: block;
-  margin: 10px 0;
-  padding: 10px 0;
 }
 .settings-container label {
   width: 35%;
@@ -104,9 +105,7 @@ header {
 }
 .settings-container strong {
   width: 55%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 10px;
+  margin: 10px;
   float: left;
 }
 .settings-container .switch-ios.switch-light input:checked ~ span {
@@ -120,7 +119,6 @@ header {
 .search-container {
   margin: 10px 0;
   padding: 10px 0;
-  border-radius: 5px;
   background-color: #e3e3e3;
 }
 
@@ -152,7 +150,7 @@ textarea {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   padding: 10px;
   margin: 10px auto;
-  width: 100%;
+  width: 90%;
 }
 
 input[id=user-search]:focus,
@@ -228,6 +226,7 @@ textarea:focus {
 .social-stat-container {
   width: 90%;
   background-color: #e3e3e3;
+  border-color: 1px solid #adadad;
   border-radius: 20px;
   margin: 10px auto;
   display: flex;
