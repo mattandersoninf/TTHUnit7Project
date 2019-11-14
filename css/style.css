@@ -22,7 +22,7 @@ input:focus {
 
 /* header */
 header {
-  height: 50px;
+  height: 10vw;
   margin: 0 auto;
   padding: 0;
   width: 100%;
@@ -34,7 +34,7 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin: auto 10px;
+  margin: auto;
   padding: 10px 0;
 }
 
@@ -49,6 +49,10 @@ header {
 .user-name, .avatar, .notification {
   float: right;
   margin: auto;
+}
+
+.notification {
+  border-right: 1px solid #443575;
 }
 
 /* grid */
@@ -82,7 +86,7 @@ header {
   justify-content: space-between;
 }
 
-.message-input-container, .settings-select-container, .settings-button-container {
+.message-input-container, .settings-select-container, .settings-button-container, .chart-container {
   margin: 0 auto;
   width: 90%;
 }
