@@ -56,8 +56,7 @@ textarea
   box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset
   padding: 10px
   margin: $gutter-space auto
-  width: 90%
-
+  width: 100%
 
 input[id='user-search']:focus,
 select:focus,
@@ -66,8 +65,7 @@ textarea:focus
   color: white
   transition: 300ms
 
-
-.message-user-container > button, .settings-container > .settings-button-container > button
+.message-input-container > button, .settings-container > .settings-button-container > button
   padding: 20px 0.3em 20px 0.3em
   font-size: 18px
   text-align: center
@@ -76,11 +74,9 @@ textarea:focus
   border: 1px solid
   border-width: 1px 1px 3px
   box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset
-  margin-bottom: 10px
-  margin-left: auto
-  margin-right: auto
+  margin: $gutter-space auto
 
-.message-user-container > button, .settings-container > .settings-button-container > button:first-of-type
+.message-input-container > button, .settings-container > .settings-button-container > button:first-of-type
   background-color: $light-purple
   border-color: $dark-purple
   color: white
@@ -89,9 +85,8 @@ textarea:focus
   background-color: #e8eeef
   color: #8a97a0
 
-.message-user-container > button
+.message-input-container > button
   width: 100%
-
 
 .settings-container> .settings-button-container > button
   width: 45%

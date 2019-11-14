@@ -82,6 +82,11 @@ header {
   justify-content: space-between;
 }
 
+.message-input-container, .settings-select-container, .settings-button-container {
+  margin: 0 auto;
+  width: 90%;
+}
+
 /* buttons and input fields */
 .traffic-toggle-container {
   margin: 10px 0;
@@ -150,7 +155,7 @@ textarea {
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   padding: 10px;
   margin: 10px auto;
-  width: 90%;
+  width: 100%;
 }
 
 input[id=user-search]:focus,
@@ -161,7 +166,7 @@ textarea:focus {
   transition: 300ms;
 }
 
-.message-user-container > button, .settings-container > .settings-button-container > button {
+.message-input-container > button, .settings-container > .settings-button-container > button {
   padding: 20px 0.3em 20px 0.3em;
   font-size: 18px;
   text-align: center;
@@ -170,12 +175,10 @@ textarea:focus {
   border: 1px solid;
   border-width: 1px 1px 3px;
   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
-  margin-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10px auto;
 }
 
-.message-user-container > button, .settings-container > .settings-button-container > button:first-of-type {
+.message-input-container > button, .settings-container > .settings-button-container > button:first-of-type {
   background-color: #8a68ab;
   border-color: #443575;
   color: white;
@@ -186,7 +189,7 @@ textarea:focus {
   color: #8a97a0;
 }
 
-.message-user-container > button {
+.message-input-container > button {
   width: 100%;
 }
 

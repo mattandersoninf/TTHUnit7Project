@@ -172,7 +172,7 @@
                                     <img src="images/member-3.jpg" alt="member-1" class="sm-img circle-img">
                                 </div>
                                 <div class="new-user-info">
-                                    <div class="new-user-activity-description">Dawn Wood commented on Facebooke's Changes for 2016</div>
+                                    <div class="new-user-activity-description">Dawn Wood commented on Facebook's Changes for 2016</div>
                                     <div class="new-user-activity-time">5 hours</div>
 
                                 </div>
@@ -191,9 +191,11 @@
                     </div>
                     <div class="message-user-container grid-line">
                         <h2 class="section-header">MESSAGE USER</h2>
-                        <input id="user-search" type="text" placeholder="Search for User">
-                        <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
-                        <button type="submit">send</button>
+                        <div class="message-input-container">
+                            <input id="user-search" type="text" placeholder="Search for User">
+                            <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
+                            <button type="submit">send</button>
+                        </div>
                     </div>
                     <div id="settings" class="settings-container grid-line">
                         <h2 class="section-header">SETTINGS</h2>
@@ -217,42 +219,44 @@
                               </span>
                         </label>
                         <br>
-                        <select id="timezone" name="timezone">
-                            <option value="0" selected="selected" hidden>Select Timezone</option>
-                            <option value="GMT">GMT</option>
-                            <option value="BST">BST</option>
-                            <option value="IST">IST</option>
-                            <option value="WET">WET</option>
-                            <option value="WEST">WEST</option>
-                            <option value="CET">CET</option>
-                            <option value="CEST">CEST</option>
-                            <option value="EET">EET</option>
-                            <option value="EEST">EEST</option>
-                            <option value="MSK">MSK</option>
-                            <option value="MSD">MSD</option>
-                            <option value="AST">AST</option>
-                            <option value="ADT">ADT</option>
-                            <option value="EST">EST</option>
-                            <option value="EDT">EDT</option>
-                            <option value="ET">ET</option>
-                            <option value="CST">CST</option>
-                            <option value="CDT">CDT</option>
-                            <option value="CT">CT</option>
-                            <option value="MST">MST</option>
-                            <option value="MDT">MDT</option>
-                            <option value="MT">MT</option>
-                            <option value="PST">PST</option>
-                            <option value="PDT">PDT</option>
-                            <option value="PT">PT</option>
-                            <option value="HST">HST</option>
-                            <option value="AKST">AKST</option>
-                            <option value="AKDT">AKDT</option>
-                            <option value="AEST">AEST</option>
-                            <option value="AEDT">AEDT</option>
-                            <option value="ACST">ACST</option>
-                            <option value="ACDT">ACDT</option>
-                            <option value="AWST">AWST</option>
-                        </select>
+                        <div class="settings-select-container">
+                            <select id="timezone" name="timezone">
+                                <option value="0" selected="selected" hidden>Select Timezone</option>
+                                <option value="GMT">GMT</option>
+                                <option value="BST">BST</option>
+                                <option value="IST">IST</option>
+                                <option value="WET">WET</option>
+                                <option value="WEST">WEST</option>
+                                <option value="CET">CET</option>
+                                <option value="CEST">CEST</option>
+                                <option value="EET">EET</option>
+                                <option value="EEST">EEST</option>
+                                <option value="MSK">MSK</option>
+                                <option value="MSD">MSD</option>
+                                <option value="AST">AST</option>
+                                <option value="ADT">ADT</option>
+                                <option value="EST">EST</option>
+                                <option value="EDT">EDT</option>
+                                <option value="ET">ET</option>
+                                <option value="CST">CST</option>
+                                <option value="CDT">CDT</option>
+                                <option value="CT">CT</option>
+                                <option value="MST">MST</option>
+                                <option value="MDT">MDT</option>
+                                <option value="MT">MT</option>
+                                <option value="PST">PST</option>
+                                <option value="PDT">PDT</option>
+                                <option value="PT">PT</option>
+                                <option value="HST">HST</option>
+                                <option value="AKST">AKST</option>
+                                <option value="AKDT">AKDT</option>
+                                <option value="AEST">AEST</option>
+                                <option value="AEDT">AEDT</option>
+                                <option value="ACST">ACST</option>
+                                <option value="ACDT">ACDT</option>
+                                <option value="AWST">AWST</option>
+                            </select>
+                        </div>
                         <div class="settings-button-container">
                             <button type="submit">save</button>
                             <button type="cancel">cancel</button>
