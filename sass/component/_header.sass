@@ -1,7 +1,6 @@
 /* header */
 
 header
-  height: 10vw
   margin: 0 auto
   padding: 0
   width: 100%
@@ -17,13 +16,14 @@ header
 
 .app-name
   float: left
+  margin-left: $gutter-space
 
 .profile-container
   margin: auto $gutter-space
 
-.user-name, .avatar, .notification
+.profile-container > div
   float: right
-  margin: auto
+  margin: auto 5px
 
 .notification
   border-right: 1px solid $dark-purple

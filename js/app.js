@@ -87,3 +87,14 @@ let doughnutChart = new Chart(mobileChart, {
         }
     }
 });
+
+
+/* alert element function */
+
+alertContainer = document.getElementsByClassName('alert-container')[0]
+
+function closeAlert(){
+    alertContainer.style.display = "none";
+};
+
+

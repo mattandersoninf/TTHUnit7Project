@@ -22,7 +22,6 @@ input:focus {
 
 /* header */
 header {
-  height: 10vw;
   margin: 0 auto;
   padding: 0;
   width: 100%;
@@ -40,15 +39,16 @@ header {
 
 .app-name {
   float: left;
+  margin-left: 10px;
 }
 
 .profile-container {
   margin: auto 10px;
 }
 
-.user-name, .avatar, .notification {
+.profile-container > div {
   float: right;
-  margin: auto;
+  margin: auto 5px;
 }
 
 .notification {
@@ -81,12 +81,19 @@ header {
   border-radius: 50%;
 }
 
-.settings-button-container {
+.alert-container {
+  color: white;
+  background-color: #443575;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.settings-button-container, .alert-container {
   display: flex;
   justify-content: space-between;
 }
 
-.message-input-container, .settings-select-container, .settings-button-container, .chart-container {
+.message-input-container, .settings-select-container, .settings-button-container, .chart-container, .alert-container {
   margin: 0 auto;
   width: 90%;
 }
@@ -160,6 +167,14 @@ textarea {
   padding: 10px;
   margin: 10px auto;
   width: 100%;
+}
+
+.alert-container > button {
+  background-color: Transparent;
+  color: white;
+  border: none;
+  outline: none;
+  width: 30px;
 }
 
 input[id=user-search]:focus,
