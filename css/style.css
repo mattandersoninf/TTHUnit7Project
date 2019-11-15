@@ -107,6 +107,11 @@ header {
   width: 90%;
 }
 
+.chart-container {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
 /* buttons and input fields */
 .traffic-toggle-container {
   margin: 10px 0;
@@ -257,8 +262,8 @@ textarea:focus {
 .social-stat-container {
   width: 90%;
   background-color: #e3e3e3;
-  border-color: 1px solid #adadad;
-  border-radius: 20px;
+  border: 1px solid #adadad;
+  border-radius: 5px;
   margin: 10px auto;
   display: flex;
   justify-content: space-evenly;
@@ -273,6 +278,9 @@ textarea:focus {
 .social-stat-container > .social-stat-text-container {
   float: right;
   margin: auto;
+}
+.social-stat-container > .social-stat-text-container > .social-stat-count {
+  font-size: 30px;
 }
 
 /* navigation */

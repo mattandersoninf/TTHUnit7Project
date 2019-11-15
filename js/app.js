@@ -20,18 +20,25 @@ let lineChart = new Chart(trafficChart, {
             label: 'Traffic',
             // straightens out the line
             lineTension: 0,
-            data:['500',
-                  '1000',
-                  '750',
-                  '1250',
-                  '1750',
-                  '1250',
-                  '1500',
-                  '1000',
-                  '1500',
-                  '2000',
-                  '1500',
-                  '2000']
+            borderColor: '#8A68AB',
+            pointBackgroundColor: 'white',
+            backgroundColor: '#d1b9f0',
+            pointBorderWidth: 2,
+            borderWidth: 1,
+            fill: true,
+            data:[
+                '500',
+                '1000',
+                '750',
+                '1250',
+                '1750',
+                '1250',
+                '1500',
+                '1000',
+                '1500',
+                '2000',
+                '1500',
+                '2000']
         }]
     },
     options:{
@@ -49,6 +56,7 @@ let barChart = new Chart(dailyChart, {
         datasets:[
             {
                 backgroundColor: '#8A68AB',
+                borderRadius: 2,
                 data:[
                     '50',
                     '75',
@@ -82,6 +90,7 @@ let doughnutChart = new Chart(mobileChart, {
         }]
     },
     options:{
+        rotation: -2.2,
         legend:{
             display: true
         }
