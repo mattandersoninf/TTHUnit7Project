@@ -11,6 +11,10 @@ const dailyChart = document.getElementById('daily-chart').getContext('2d');
 // mobile chart element
 const mobileChart = document.getElementById('mobile-chart').getContext('2d');
 
+// alert container and it's close button
+alertContainer = document.getElementsByClassName('alert-container')[0]
+closeAlertButton = alertContainer.getElementsByTagName('BUTTON')[0]
+
 
 let lineChart = new Chart(trafficChart, {
     type: 'line',
@@ -98,12 +102,12 @@ let doughnutChart = new Chart(mobileChart, {
 });
 
 
-/* alert element function */
+// alert element function
 
-alertContainer = document.getElementsByClassName('alert-container')[0]
-
-function closeAlert(){
+closeAlertButton.addEventListener("click", function(){
     alertContainer.style.display = "none";
-};
+});
+
+
 
 
