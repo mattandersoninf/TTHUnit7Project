@@ -90,13 +90,20 @@ header {
   border-radius: 50%;
 }
 
-.alert-container, .message-confirm {
+.alert-container, .message-confirm, .user-fail, .message-fail {
   color: white;
-  background-color: #443575;
   padding: 5px;
   border-radius: 5px;
   width: 90%;
   margin: 10px auto;
+}
+
+.alert-container, .message-confirm {
+  background-color: #443575;
+}
+
+.message-fail, .user-fail {
+  background-color: #d12c2c;
 }
 
 .settings-button-container, .alert-container {

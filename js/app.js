@@ -23,6 +23,7 @@ const messageConfirm = document.getElementsByClassName("message-confirm")[0];
 // form elements to modify default behavior for submissions
 const messageForm = document.querySelector('form.message-user-container');
 const settingsForm = document.querySelector('form.settings-container');
+
 messageForm.addEventListener('submit', evt => {  evt.preventDefault() });
 settingsForm.addEventListener('submit', evt => {  evt.preventDefault() });
 
@@ -113,7 +114,6 @@ let doughnutChart = new Chart(mobileChart, {
 });
 
 // alert element function
-
 closeAlertButton.addEventListener("click", function(){
     alertContainer.style.display = "none";
 });
@@ -121,6 +121,40 @@ closeAlertButton.addEventListener("click", function(){
 
 // send user button function
 sendUserButton.addEventListener("click", function(){
-    messageConfirm.removeAttribute("hidden");
+    
+    if (document.querySelector("#user-search").value == ''){
+        if (messageConfirm.getAttribute("hidden") == false){
+            messageConfirm.setAttribute("hidden",true);
+        }
+        document.querySelector(".user-fail").removeAttribute("hidden");
+    }
+    else{
+        document.querySelector(".user-fail").setAttribute("hidden",true);
+    }
+
+    if (document.querySelector("#user-message").value == ''){
+        if (messageConfirm.getAttribute("hidden") == false){
+            messageConfirm.setAttribute("hidden",true);
+        }
+
+        document.querySelector(".message-fail").removeAttribute("hidden");
+    }
+    else{
+        document.querySelector(".message-fail").setAttribute("hidden",true);
+    }
+
+    if ((document.querySelector("#user-search").value != '') && (document.querySelector("#user-message").value.length != '')){
+        
+        if (document.querySelector(".message-fail").getAttribute("hidden") == null){
+            document.querySelector(".message-fail").setAttribute("hidden",true);
+        }
+        
+        if (document.querySelector(".user-fail").getAttribute("hidden") == null){
+            document.querySelector(".user-fail").setAttribute("hidden",true);
+        }
+
+        messageConfirm.removeAttribute("hidden");
+    }
+
 })
 

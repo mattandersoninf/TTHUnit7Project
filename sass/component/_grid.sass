@@ -19,13 +19,18 @@
 .circle-img
   border-radius: 50%
 
-.alert-container, .message-confirm
+.alert-container, .message-confirm,.user-fail, .message-fail
   color: white
-  background-color: $dark-purple
   padding: 5px
   border-radius: 5px
   width: 90%
   margin: $gutter-space auto
+
+.alert-container, .message-confirm
+  background-color: $dark-purple
+
+.message-fail, .user-fail
+  background-color: $fail-color
 
 
 .settings-button-container, .alert-container
