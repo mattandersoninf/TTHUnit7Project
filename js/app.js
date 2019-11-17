@@ -12,8 +12,19 @@ const dailyChart = document.getElementById('daily-chart').getContext('2d');
 const mobileChart = document.getElementById('mobile-chart').getContext('2d');
 
 // alert container and it's close button
-alertContainer = document.getElementsByClassName('alert-container')[0]
-closeAlertButton = alertContainer.getElementsByTagName('BUTTON')[0]
+const alertContainer = document.getElementsByClassName('alert-container')[0];
+const closeAlertButton = alertContainer.getElementsByTagName('BUTTON')[0];
+
+// send user message button
+const sendUserButtonContainer = document.getElementsByClassName("message-input-container")[0]
+const sendUserButton = sendUserButtonContainer.getElementsByTagName('BUTTON')[0];
+const messageConfirm = document.getElementsByClassName("message-confirm")[0];
+
+// form elements to modify default behavior for submissions
+const messageForm = document.querySelector('form.message-user-container');
+const settingsForm = document.querySelector('form.settings-container');
+messageForm.addEventListener('submit', evt => {  evt.preventDefault() });
+settingsForm.addEventListener('submit', evt => {  evt.preventDefault() });
 
 
 let lineChart = new Chart(trafficChart, {
@@ -101,7 +112,6 @@ let doughnutChart = new Chart(mobileChart, {
     }
 });
 
-
 // alert element function
 
 closeAlertButton.addEventListener("click", function(){
@@ -109,5 +119,8 @@ closeAlertButton.addEventListener("click", function(){
 });
 
 
-
+// send user button function
+sendUserButton.addEventListener("click", function(){
+    messageConfirm.removeAttribute("hidden");
+})
 

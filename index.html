@@ -191,15 +191,18 @@
                             </div>
                         </div>
                     </div>
-                    <div class="message-user-container grid-line">
+                    <form class="message-user-container grid-line">
                         <h2 class="section-header">MESSAGE USER</h2>
                         <div class="message-input-container">
                             <input id="user-search" type="text" placeholder="Search for User">
                             <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
                             <button type="submit">send</button>
                         </div>
-                    </div>
-                    <div id="settings" class="settings-container grid-line">
+                        <div class="message-confirm" hidden>
+                            <p>You message has been sent</p>
+                        </div>
+                    </form>
+                    <form id="settings" class="settings-container grid-line">
                         <h2 class="section-header">SETTINGS</h2>
                         <strong>Send Email Notification</strong>
                         <label class="switch-light switch-ios" onclick="">
@@ -264,7 +267,7 @@
                             <button type="cancel">cancel</button>
                         </div>
 
-                    </div>
+                    </form>
                 </div>
             </main>
             <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
