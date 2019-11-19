@@ -29,12 +29,14 @@ settingsForm.addEventListener('submit', evt => {  evt.preventDefault() });
 
 const searchableUsers = ['Victoria Chambers','Dale Byrd', 'Dawn Wood', 'Dan Oliver', 'Josh Sullivan']
 
+// line chart buttons
+
 let lineChart = new Chart(trafficChart, {
     type: 'line',
     data: {
         labels:['16-22','23-29','30-5','6-12','13-19','20-26','27-3','4-10','11-17','18-24','25-31'],
         datasets:[{
-            label: 'Traffic',
+            label: 'Hourly',
             // straightens out the line
             lineTension: 0,
             borderColor: '#8A68AB',
@@ -43,6 +45,7 @@ let lineChart = new Chart(trafficChart, {
             pointBorderWidth: 2,
             borderWidth: 1,
             fill: true,
+            hidden: false,
             data:[
                 '500',
                 '1000',
@@ -56,6 +59,81 @@ let lineChart = new Chart(trafficChart, {
                 '2000',
                 '1500',
                 '2000']
+        },
+        {
+            label: 'Daily',
+            // straightens out the line
+            lineTension: 0,
+            borderColor: '#8A68AB',
+            pointBackgroundColor: 'white',
+            backgroundColor: '#d1b9f0',
+            pointBorderWidth: 2,
+            borderWidth: 1,
+            fill: true,
+            hidden: true,
+            data:[
+                '750',
+                '250',
+                '1000',
+                '250',
+                '750',
+                '500',
+                '750',
+                '2500',
+                '1500',
+                '1000',
+                '1500',
+                '1000']
+        },
+        {
+            label: 'Weekly',
+            // straightens out the line
+            lineTension: 0,
+            borderColor: '#8A68AB',
+            pointBackgroundColor: 'white',
+            backgroundColor: '#d1b9f0',
+            pointBorderWidth: 2,
+            borderWidth: 1,
+            fill: true,
+            hidden: true,
+            data:[
+                '500',
+                '1000',
+                '750',
+                '1250',
+                '1750',
+                '1250',
+                '1500',
+                '1000',
+                '1500',
+                '2000',
+                '1500',
+                '2000']
+        },
+        {
+            label: 'Monthly',
+            // straightens out the line
+            lineTension: 0,
+            borderColor: '#8A68AB',
+            pointBackgroundColor: 'white',
+            backgroundColor: '#d1b9f0',
+            pointBorderWidth: 2,
+            borderWidth: 1,
+            fill: true,
+            hidden: true,
+            data:[
+                '1000',
+                '750',
+                '500',
+                '250',
+                '1750',
+                '500',
+                '500',
+                '500',
+                '250',
+                '1000',
+                '500',
+                '750']
         }]
     },
     options:{
@@ -64,6 +142,7 @@ let lineChart = new Chart(trafficChart, {
         }
     }
 });
+
 
 
 let barChart = new Chart(dailyChart, {
