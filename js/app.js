@@ -30,6 +30,42 @@ settingsForm.addEventListener('submit', evt => {  evt.preventDefault() });
 const searchableUsers = ['Victoria Chambers','Dale Byrd', 'Dawn Wood', 'Dan Oliver', 'Josh Sullivan']
 
 // line chart buttons
+hourlyLabel = document.querySelector("#hour");
+dailyLabel = document.querySelector("#day");
+weeklyLabel = document.querySelector("#week");
+monthlyLabel = document.querySelector("#month");
+
+hourlyLabel.addEventListener("click", function(){
+    lineChart.data.datasets[0]["hidden"] = false;
+    lineChart.data.datasets[1]["hidden"] = true;
+    lineChart.data.datasets[2]["hidden"] = true;
+    lineChart.data.datasets[3]["hidden"] = true;
+    lineChart.update();
+});
+
+dailyLabel.addEventListener("click", function(){
+    lineChart.data.datasets[0]["hidden"] = true;
+    lineChart.data.datasets[1]["hidden"] = false;
+    lineChart.data.datasets[2]["hidden"] = true;
+    lineChart.data.datasets[3]["hidden"] = true;
+    lineChart.update();
+});
+
+weeklyLabel.addEventListener("click", function(){
+    lineChart.data.datasets[0]["hidden"] = true;
+    lineChart.data.datasets[1]["hidden"] = true;
+    lineChart.data.datasets[2]["hidden"] = false;
+    lineChart.data.datasets[3]["hidden"] = true;
+    lineChart.update();
+});
+
+monthlyLabel.addEventListener("click", function(){
+    lineChart.data.datasets[0]["hidden"] = true;
+    lineChart.data.datasets[1]["hidden"] = true;
+    lineChart.data.datasets[2]["hidden"] = true;
+    lineChart.data.datasets[3]["hidden"] = false;
+    lineChart.update();
+});
 
 let lineChart = new Chart(trafficChart, {
     type: 'line',
@@ -45,7 +81,7 @@ let lineChart = new Chart(trafficChart, {
             pointBorderWidth: 2,
             borderWidth: 1,
             fill: true,
-            hidden: false,
+            hidden: true,
             data:[
                 '500',
                 '1000',
@@ -95,7 +131,7 @@ let lineChart = new Chart(trafficChart, {
             pointBorderWidth: 2,
             borderWidth: 1,
             fill: true,
-            hidden: true,
+            hidden: false,
             data:[
                 '500',
                 '1000',
