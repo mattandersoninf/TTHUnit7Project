@@ -67,6 +67,22 @@ monthlyLabel.addEventListener("click", function(){
     lineChart.update();
 });
 
+// on startup, give the setting inputs local storage values
+function bodyOnLoad(){
+
+    if (localStorage.getItem("email") == "true"){
+
+        document.querySelector("#email").checked = true;
+    }
+
+    if (localStorage.getItem("public") == "true"){
+
+        document.querySelector("#public").checked = true;
+
+    }
+
+}
+
 let lineChart = new Chart(trafficChart, {
     type: 'line',
     data: {
@@ -274,7 +290,23 @@ sendUserButton.addEventListener("click", function(){
 
 })
 
+document.querySelector("#save").addEventListener("click", function(){
 
+    localStorage.setItem("email", document.querySelector("#email").checked);
 
+    localStorage.setItem("public", document.querySelector("#public").checked);
 
+});
+
+document.querySelector("#cancel").addEventListener("click", function(){
+
+    localStorage.removeItem("email");
+
+    localStorage.removeItem("public");
+
+    document.querySelector("#email").checked = false;
+
+    document.querySelector("#public").checked = false;
+
+});
 

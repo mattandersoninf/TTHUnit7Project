@@ -10,7 +10,7 @@
         <!-- Use for the toggle switch -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     </head>
-    <body>
+    <body onload="startup();">
         <div class = grid>
             <header>
                 <div class="header-container">
@@ -195,7 +195,7 @@
                         <h2 class="section-header">MESSAGE USER</h2>
                         <div class="message-input-container">
                             <div class="autocomplete">
-                                <select class="chosen">
+                                <select class="chosen" id="user">
                                     <option>Victoria Chambers</option>
                                     <option>Dale Byrd</option>
                                     <option>Dawn Wood</option>
@@ -220,22 +220,22 @@
                         <h2 class="section-header">SETTINGS</h2>
                         <strong>Send Email Notification</strong>
                         <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox">
+                            <input type="checkbox" id="email">
                             <span>
                                 <span>Off</span>
                                 <span>On</span>
                                 <a></a>
-                              </span>
+                            </span>
                         </label>
                         <br>
                         <strong>Set Profile to Public</strong>
                         <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox">
+                            <input type="checkbox" id="public">
                             <span>
                                 <span>Off</span>
                                 <span>On</span>
                                 <a></a>
-                              </span>
+                            </span>
                         </label>
                         <br>
                         <div class="settings-select-container">
@@ -277,8 +277,8 @@
                             </select>
                         </div>
                         <div class="settings-button-container">
-                            <button type="submit">save</button>
-                            <button type="cancel">cancel</button>
+                            <button type="submit" id="save">save</button>
+                            <button type="cancel" id="cancel">cancel</button>
                         </div>
 
                     </form>
