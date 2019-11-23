@@ -29,8 +29,9 @@ settingsForm.addEventListener('submit', evt => {  evt.preventDefault() });
 
 const searchableUsers = ['Victoria Chambers','Dale Byrd', 'Dawn Wood', 'Dan Oliver', 'Josh Sullivan']
 
+// alert bell
 document.querySelector(".notification").addEventListener("click", function(){
-    
+    // overlay the alert with a menu
 
 });
 
