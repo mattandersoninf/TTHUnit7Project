@@ -32,17 +32,13 @@ const searchableUsers = ['Victoria Chambers','Dale Byrd', 'Dawn Wood', 'Dan Oliv
 // alert bell
 document.querySelector(".notification").addEventListener("click", function(){
     // overlay the alert with a menu
-    
-
+    document.getElementById("overlay").style.display = "block";
 });
 
-function on() {
-    document.getElementById("overlay").style.display = "block";
-}
-
-function off() {
+document.querySelector("#overlay").addEventListener("click", function() {
     document.getElementById("overlay").style.display = "none";
-}
+    document.querySelector(".notification").style.transform = "translate(0, 3px)";
+});
 
 // line chart buttons
 hourlyLabel = document.querySelector("#hour");

@@ -11,7 +11,6 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     </head>
     <body onload="bodyOnLoad();">
-        <div id="overlay"></div>
         <div class = grid>
             <header>
                 <div class="header-container">
@@ -19,7 +18,14 @@
                     <div class="profile-container">
                         <div class="user-name">Josh Sullivan</div>
                         <div class="avatar"><img src="images/member-5.jpg" alt="avatar" class="user-img circle-img"></div>
-                        <div class="notification"><img class="user-img circle-img" src="icons/icon-bell.svg" alt="bell"></div>
+                        <div class="notification">
+                            <img class="user-img circle-img" src="icons/icon-bell.svg" alt="bell">
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
