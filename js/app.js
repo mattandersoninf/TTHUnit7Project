@@ -32,8 +32,17 @@ const searchableUsers = ['Victoria Chambers','Dale Byrd', 'Dawn Wood', 'Dan Oliv
 // alert bell
 document.querySelector(".notification").addEventListener("click", function(){
     // overlay the alert with a menu
+    
 
 });
+
+function on() {
+    document.getElementById("overlay").style.display = "block";
+}
+
+function off() {
+    document.getElementById("overlay").style.display = "none";
+}
 
 // line chart buttons
 hourlyLabel = document.querySelector("#hour");
