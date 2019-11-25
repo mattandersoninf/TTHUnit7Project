@@ -29,16 +29,6 @@ settingsForm.addEventListener('submit', evt => {  evt.preventDefault() });
 
 const searchableUsers = ['Victoria Chambers','Dale Byrd', 'Dawn Wood', 'Dan Oliver', 'Josh Sullivan']
 
-// alert bell
-document.querySelector(".notification").addEventListener("click", function(){
-    // overlay the alert with a menu
-    document.getElementById("overlay").style.display = "block";
-});
-
-document.querySelector("#overlay").addEventListener("click", function() {
-    document.getElementById("overlay").style.display = "none";
-    document.querySelector(".notification").style.transform = "translate(0, 3px)";
-});
 
 // line chart buttons
 hourlyLabel = document.querySelector("#hour");
