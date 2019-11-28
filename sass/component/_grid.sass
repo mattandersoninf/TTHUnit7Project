@@ -12,10 +12,18 @@
   width: 100%
 
 .new-user, .new-user-activity
-  margin: $gutter-space auto
+  display: flex
+  margin: $gutter-space 0
+  width: 100%
   & > div, & > img
+    float: left
     margin: $gutter-space auto
     text-align: center
+  &:nth-child(even)
+    width: 15%
+  &:nth-child(odd)
+    width: 70%
+    
 
 .circle-img
   border-radius: 50%
@@ -45,3 +53,5 @@
 .chart-container
   margin-top: 5px
   margin-bottom: $gutter-space
+
+
