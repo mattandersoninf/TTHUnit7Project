@@ -82,7 +82,7 @@ header {
 }
 
 .new-user, .new-user-activity {
-  display: grid;
+  display: flex;
   margin: 10px 0;
   width: 100%;
 }
