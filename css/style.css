@@ -82,20 +82,13 @@ header {
 }
 
 .new-user, .new-user-activity {
-  display: flex;
-  margin: 10px 0;
-  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  margin: 20px 0;
 }
-.new-user > div, .new-user > img, .new-user-activity > div, .new-user-activity > img {
-  float: left;
-  margin: 10px auto;
-  text-align: center;
-}
-.new-user:nth-child(even), .new-user-activity:nth-child(even) {
-  width: 15%;
-}
-.new-user:nth-child(odd), .new-user-activity:nth-child(odd) {
-  width: 70%;
+.new-user > .img-container > img, .new-user-activity > .img-container > img {
+  display: block;
+  margin: auto;
 }
 
 .circle-img {

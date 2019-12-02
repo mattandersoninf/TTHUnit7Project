@@ -12,18 +12,13 @@
   width: 100%
 
 .new-user, .new-user-activity
-  display: flex
-  margin: $gutter-space 0
-  width: 100%
-  & > div, & > img
-    float: left
-    margin: $gutter-space auto
-    text-align: center
-  &:nth-child(even)
-    width: 15%
-  &:nth-child(odd)
-    width: 70%
-    
+  display: grid
+  grid-template-columns: 1fr 3fr 1fr
+  margin: 20px 0
+  & > .img-container > img
+    display: block
+    margin: auto
+
 
 .circle-img
   border-radius: 50%
