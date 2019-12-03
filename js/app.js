@@ -29,7 +29,6 @@ settingsForm.addEventListener('submit', evt => {  evt.preventDefault() });
 
 const searchableUsers = ['Victoria Chambers','Dale Byrd', 'Dawn Wood', 'Dan Oliver', 'Josh Sullivan']
 
-
 // line chart buttons
 hourlyLabel = document.querySelector("#hour");
 dailyLabel = document.querySelector("#day");

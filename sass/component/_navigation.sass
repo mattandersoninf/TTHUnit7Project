@@ -4,6 +4,14 @@
   background-color: $dark-purple
   padding: $gutter-space
   margin: 0
+  display: none
+
+  & > ul > li:first-child
+    border-left: 3px solid $light-green
+
+  @include media-query($desktop-screen)
+    display: block
+  
 
 .nav-item
   margin: $gutter-space auto
