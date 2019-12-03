@@ -22,6 +22,11 @@ input:focus {
   transition: 300ms;
 }
 
+.sm-txt {
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 /* header */
 header {
   margin: 0 auto;
@@ -86,9 +91,12 @@ header {
   grid-template-columns: 1fr 3fr 1fr;
   margin: 20px 0;
 }
-.new-user > .img-container > img, .new-user-activity > .img-container > img {
+.new-user > .img-container > img, .new-user > .next-container > img, .new-user-activity > .img-container > img, .new-user-activity > .next-container > img {
   display: block;
   margin: auto;
+}
+.new-user > .next-container > img, .new-user-activity > .next-container > img {
+  opacity: 0.4;
 }
 
 .circle-img {
