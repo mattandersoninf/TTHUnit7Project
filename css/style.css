@@ -89,6 +89,7 @@ header {
 .new-user, .new-user-activity {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
+  grid-gap: 3%;
   margin: 20px 0;
 }
 .new-user > .img-container > img, .new-user > .next-container > img, .new-user-activity > .img-container > img, .new-user-activity > .next-container > img {
@@ -157,7 +158,7 @@ header {
 }
 .settings-container strong {
   width: 55%;
-  margin: 10px;
+  margin: 10px auto 10px 5%;
   float: left;
 }
 .settings-container .switch-ios.switch-light input:checked ~ span {
@@ -294,8 +295,6 @@ textarea:focus {
 
 #traffic-chart, #daily-chart, #mobile-chart {
   width: 100%;
-  height: 400px;
-  max-width: 400px;
 }
 
 /* image */
