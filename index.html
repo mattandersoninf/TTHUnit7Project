@@ -11,26 +11,26 @@
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     </head>
     <body onload="bodyOnLoad();">
-        <div class = grid>
-            <header>
-                <div class="header-container">
-                    <div class="app-name"><b>Your</b>App<sup>TM</sup></div>
-                    <div class="profile-container">
-                        <div class="user-name">Josh Sullivan</div>
-                        <div class="avatar"><img src="images/member-5.jpg" alt="avatar" class="user-img circle-img"></div>
-                        <div class="notification">
-                            <img class="user-img circle-img" src="icons/icon-bell.svg" alt="bell">
-                            <div class="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
-                            </div>
+        <header>
+            <div class="header-container">
+                <div class="app-name"><b>Your</b>App<sup>TM</sup></div>
+                <div class="profile-container">
+                    <div class="user-name">Josh Sullivan</div>
+                    <div class="avatar"><img src="images/member-5.jpg" alt="avatar" class="user-img circle-img"></div>
+                    <div class="notification">
+                        <img class="user-img circle-img" src="icons/icon-bell.svg" alt="bell">
+                        <div class="dropdown-content">
+                            <a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
                         </div>
                     </div>
                 </div>
-            </header>
-            <main>
-                <nav class="main-nav">
+            </div>
+        </header>
+        <main>
+            <div class = grid>
+                <nav class="main-nav grid-section">
                     <ul>
                         <li class="nav-item"><a href="#"><img class="icon-img" src="icons/icon-dashboard.svg" class="nav-svg" alt="dashboard"></a></li>
                         <li class="nav-item"><a href="#members"><img class="icon-img" src="icons/icon-members.svg" class="nav-svg" alt="members"></a></li>
@@ -38,266 +38,264 @@
                         <li class="nav-item"><a href="#settings"><img class="icon-img" src="icons/icon-settings.svg" class="nav-svg" alt="settings"></a></li>
                     </ul>
                 </nav>
-                <div class="wrapper">
-                    <div class="dashboard-header-container">
-                        <h1 class="dashboard"><b>Dashboard</b></h1>
-                    </div>
-                    <div class="search-container grid-line">
-                        <input id="main-search" type="text" placeholder="Search">
-                    </div>
-                    <div class="alert-container">
-                        <p><b>Alert:</b> insert alert content here.</p> <button aria-label="close-alert">X</button>
-                    </div>
-                    <div class="traffic-container">
-                        <h2 class="section-header">TRAFFIC</h2>
-                        <div class="traffic-toggle-container">
-                            <div class="switch-toggle switch-ios">
+                <div class="dashboard-header-container grid-section">
+                    <h1 class="dashboard"><b>Dashboard</b></h1>
+                </div>
+                <div class="search-container grid-line grid-section">
+                    <input id="main-search" type="text" placeholder="Search">
+                </div>
+                <div class="alert-container grid-section">
+                    <p><b>Alert:</b> insert alert content here.</p> <button aria-label="close-alert">X</button>
+                </div>
+                <div class="traffic-container grid-section">
+                    <h2 class="section-header">TRAFFIC</h2>
+                    <div class="traffic-toggle-container">
+                        <div class="switch-toggle switch-ios">
 
-                                <input id="hour" name="view" type="radio">
-                                <label for="hour">Hourly</label>
+                            <input id="hour" name="view" type="radio">
+                            <label for="hour">Hourly</label>
 
-                                <input id="day" name="view" type="radio">
-                                <label for="day">Daily</label>
+                            <input id="day" name="view" type="radio">
+                            <label for="day">Daily</label>
 
-                                <input id="week" name="view" type="radio" checked>
-                                <label for="week">Weekly</label>
+                            <input id="week" name="view" type="radio" checked>
+                            <label for="week">Weekly</label>
 
-                                <input id="month" name="view" type="radio">
-                                <label for="month">Monthly</label>
+                            <input id="month" name="view" type="radio">
+                            <label for="month">Monthly</label>
 
-                                <a></a>
-                            </div>
-                        </div>
-                        <div class="traffic-chart-container chart-container">
-                            <canvas id="traffic-chart"></canvas>
+                            <a></a>
                         </div>
                     </div>
-                    <div class="daily-traffic-container  grid-line">
-                        <h2 class="section-header">DAILY TRAFFIC</h2>
-                        <div class="daily-chart-container chart-container">
-                            <canvas id="daily-chart"></canvas>
+                    <div class="traffic-chart-container chart-container">
+                        <canvas id="traffic-chart"></canvas>
+                    </div>
+                </div>
+                <div class="daily-traffic-container grid-line grid-section">
+                    <h2 class="section-header">DAILY TRAFFIC</h2>
+                    <div class="daily-chart-container chart-container">
+                        <canvas id="daily-chart"></canvas>
+                    </div>
+                </div>
+                <div id="members" class="mobile-user-container grid-line grid-section">
+                    <h2 class="section-header">MOBILE USERS</h2>
+                    <div class="mobile-chart-container chart-container">
+                        <canvas id="mobile-chart"></canvas>
+                    </div>
+                </div>
+                <div class="social-stats-container grid-line grid-section">
+                    <h2 class="section-header">SOCIAL STATS</h2>
+                    <div class="social-stat-container twitter">
+                        <img src="icons/icon-twitter.svg" alt="twitter" class="lg-img circle-img svg-twitter">
+                        <div class="social-stat-text-container">
+                            <h3 class="social-stat-name">Twitter</h3>
+                            <p class="social-stat-count">10,345</p>
                         </div>
                     </div>
-                    <div id="members" class="mobile-user-container grid-line">
-                        <h2 class="section-header">MOBILE USERS</h2>
-                        <div class="mobile-chart-container chart-container">
-                            <canvas id="mobile-chart"></canvas>
+                    <div class="social-stat-container facebook">
+                        <img src="icons/icon-facebook.svg" alt="facebook" class="lg-img circle-img svg-facebook">
+                        <div class="social-stat-text-container">
+                            <h3 class="social-stat-name">Facebook</h3>
+                            <p class="social-stat-count">8,739</p>
                         </div>
                     </div>
-                    <div class="social-stats-container grid-line">
-                        <h2 class="section-header">SOCIAL STATS</h2>
-                        <div class="social-stat-container twitter">
-                            <img src="icons/icon-twitter.svg" alt="twitter" class="lg-img circle-img svg-twitter">
-                            <div class="social-stat-text-container">
-                                <h3 class="social-stat-name">Twitter</h3>
-                                <p class="social-stat-count">10,345</p>
-                            </div>
-                        </div>
-                        <div class="social-stat-container facebook">
-                            <img src="icons/icon-facebook.svg" alt="facebook" class="lg-img circle-img svg-facebook">
-                            <div class="social-stat-text-container">
-                                <h3 class="social-stat-name">Facebook</h3>
-                                <p class="social-stat-count">8,739</p>
-                            </div>
-                        </div>
-                        <div class="social-stat-container google">
-                            <img src="icons/icon-google-plus.svg" alt="google" class="lg-img circle-img svg-google">
-                            <div class="social-stat-text-container">
-                                <h3 class="social-stat-name">Google+</h3>
-                                <p class="social-stat-count">2,530</p>
-                            </div>
+                    <div class="social-stat-container google">
+                        <img src="icons/icon-google-plus.svg" alt="google" class="lg-img circle-img svg-google">
+                        <div class="social-stat-text-container">
+                            <h3 class="social-stat-name">Google+</h3>
+                            <p class="social-stat-count">2,530</p>
                         </div>
                     </div>
-                    <div class="new-user-container grid-line">
-                        <h2 class="section-header">NEW MEMBERS</h2>
-                        <div class="new-user-list">
-                            <div class="new-user">
-                                <div class="img-container">
-                                    <img src="images/member-1.jpg" alt="member-1" class="sm-img circle-img">
-                                </div>
-                                <div class="new-user-info">
-                                    <div class="new-user-name">Victoria Chambers</div>
-                                    <div class="sm-txt">victoria.chambers80@example.com</div>
-                                </div>
-                                <div class="new-user-date">10/15/15</div>
+                </div>
+                <div class="new-user-container grid-line grid-section">
+                    <h2 class="section-header">NEW MEMBERS</h2>
+                    <div class="new-user-list">
+                        <div class="new-user">
+                            <div class="img-container">
+                                <img src="images/member-1.jpg" alt="member-1" class="sm-img circle-img">
                             </div>
-                            <div class="new-user">
-                                <div class="img-container">
-                                    <img src="images/member-2.jpg" alt="member-2" class="sm-img circle-img">
-                                </div>
-                                <div class="new-user-info">
-                                    <div class="new-user-name">Dale Byrd</div>
-                                    <div class="sm-txt">dale.byrd52@example.com</div>
-                                </div>
-                                <div class="new-user-date">10/15/15</div>
+                            <div class="new-user-info">
+                                <div class="new-user-name">Victoria Chambers</div>
+                                <div class="sm-txt">victoria.chambers80@example.com</div>
                             </div>
-                            <div class="new-user">
-                                <div class="img-container">
-                                    <img src="images/member-3.jpg" alt="member-3" class="sm-img circle-img">
-                                </div>
-                                <div class="new-user-info">
-                                    <div class="new-user-name">Dawn Wood</div>
-                                    <div class="sm-txt">dawn.wood16@example.com</div>
-                                </div>
-                                <div class="new-user-date">10/15/15</div>
+                            <div class="new-user-date">10/15/15</div>
+                        </div>
+                        <div class="new-user">
+                            <div class="img-container">
+                                <img src="images/member-2.jpg" alt="member-2" class="sm-img circle-img">
                             </div>
-                            <div class="new-user">
-                                <div class="img-container">
-                                    <img src="images/member-4.jpg" alt="member-4" class="sm-img circle-img">
-                                </div>
-                                <div class="new-user-info">
-                                    <div class="new-user-name">Dan Oliver</div>
-                                    <div class="sm-txt">dan.oliver@example.com</div>
-                                </div>
-                                <div class="new-user-date">10/15/15</div>
+                            <div class="new-user-info">
+                                <div class="new-user-name">Dale Byrd</div>
+                                <div class="sm-txt">dale.byrd52@example.com</div>
                             </div>
+                            <div class="new-user-date">10/15/15</div>
+                        </div>
+                        <div class="new-user">
+                            <div class="img-container">
+                                <img src="images/member-3.jpg" alt="member-3" class="sm-img circle-img">
+                            </div>
+                            <div class="new-user-info">
+                                <div class="new-user-name">Dawn Wood</div>
+                                <div class="sm-txt">dawn.wood16@example.com</div>
+                            </div>
+                            <div class="new-user-date">10/15/15</div>
+                        </div>
+                        <div class="new-user">
+                            <div class="img-container">
+                                <img src="images/member-4.jpg" alt="member-4" class="sm-img circle-img">
+                            </div>
+                            <div class="new-user-info">
+                                <div class="new-user-name">Dan Oliver</div>
+                                <div class="sm-txt">dan.oliver@example.com</div>
+                            </div>
+                            <div class="new-user-date">10/15/15</div>
                         </div>
                     </div>
-                    <div id="visits" class="recent-activity-container grid-line">
-                        <h2 class="section-header">RECENT ACTIVITY</h2>
-                        <div>
-                            <div class="new-user-activity">
-                                <div class="img-container">
-                                    <img src="images/member-1.jpg" alt="member-1" class="sm-img circle-img">
-                                </div>
-                                <div class="new-user-info">
-                                    <div class="new-user-activity-description">Victoria Chambers commented on YourApp's SEO Tips</div>
-                                    <div class="sm-txt">4 hours</div>
-                                </div>
-                                <div class="next-container"><img src="icons/icon-next.svg" alt="next" class="sm-img"></div>
+                </div>
+                <div id="visits" class="recent-activity-container grid-line grid-section">
+                    <h2 class="section-header">RECENT ACTIVITY</h2>
+                    <div class="new-user-activity-list">
+                        <div class="new-user-activity">
+                            <div class="img-container">
+                                <img src="images/member-1.jpg" alt="member-1" class="sm-img circle-img">
                             </div>
-                            <div class="new-user-activity">
-                                <div class="img-container">
-                                    <img src="images/member-2.jpg" alt="member-1" class="sm-img circle-img">
-                                </div>
-                                <div class="new-user-info">
-                                    <div class="new-user-activity-description">Dale Byrd like the post Facebook's Changes for 2016</div>
-                                    <div class="sm-txt">5 hours</div>
-                                </div>
-                                <div class="next-container"><img src="icons/icon-next.svg" alt="next" class="sm-img"></div>
+                            <div class="new-user-info">
+                                <div class="new-user-activity-description">Victoria Chambers commented on YourApp's SEO Tips</div>
+                                <div class="sm-txt">4 hours</div>
                             </div>
-                            <div class="new-user-activity">
-                                <div class="img-container">
-                                    <img src="images/member-3.jpg" alt="member-1" class="sm-img circle-img">
-                                </div>
-                                <div class="new-user-info">
-                                    <div class="new-user-activity-description">Dawn Wood commented on Facebook's Changes for 2016</div>
-                                    <div class="sm-txt">5 hours</div>
-                                </div>
-                                <div class="next-container"><img src="icons/icon-next.svg" alt="next" class="sm-img"></div>
+                            <div class="next-container"><img src="icons/icon-next.svg" alt="next"></div>
+                        </div>
+                        <div class="new-user-activity">
+                            <div class="img-container">
+                                <img src="images/member-2.jpg" alt="member-1" class="sm-img circle-img">
                             </div>
-                            <div class="new-user-activity">
-                                <div class="img-container">
-                                    <img src="images/member-4.jpg" alt="member-1" class="sm-img circle-img">
-                                </div>
-                                <div class="new-user-info">
-                                    <div class="new-user-activity-description">Dan Oliver posted YourApp's SEO Tips</div>
-                                    <div class="sm-txt">1 day ago</div>
-                                </div>
-                                <div class="next-container"><img src="icons/icon-next.svg" alt="next" class="sm-img"></div>
+                            <div class="new-user-info">
+                                <div class="new-user-activity-description">Dale Byrd like the post Facebook's Changes for 2016</div>
+                                <div class="sm-txt">5 hours</div>
                             </div>
+                            <div class="next-container"><img src="icons/icon-next.svg" alt="next"></div>
+                        </div>
+                        <div class="new-user-activity">
+                            <div class="img-container">
+                                <img src="images/member-3.jpg" alt="member-1" class="sm-img circle-img">
+                            </div>
+                            <div class="new-user-info">
+                                <div class="new-user-activity-description">Dawn Wood commented on Facebook's Changes for 2016</div>
+                                <div class="sm-txt">5 hours</div>
+                            </div>
+                            <div class="next-container"><img src="icons/icon-next.svg" alt="next"></div>
+                        </div>
+                        <div class="new-user-activity">
+                            <div class="img-container">
+                                <img src="images/member-4.jpg" alt="member-1" class="sm-img circle-img">
+                            </div>
+                            <div class="new-user-info">
+                                <div class="new-user-activity-description">Dan Oliver posted YourApp's SEO Tips</div>
+                                <div class="sm-txt">1 day ago</div>
+                            </div>
+                            <div class="next-container"><img src="icons/icon-next.svg" alt="next"></div>
                         </div>
                     </div>
-                    <form class="message-user-container grid-line">
-                        <h2 class="section-header">MESSAGE USER</h2>
-                        <div class="message-input-container">
-                            <div class="autocomplete">
-                                <select class="chosen" id="user">
-                                    <option>Victoria Chambers</option>
-                                    <option>Dale Byrd</option>
-                                    <option>Dawn Wood</option>
-                                    <option>Dan Oliver</option>
-                                    <option>Josh Sullivan</option>
-                                </select>
-                            </div>
-                            <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
-                            <button type="submit">send</button>
-                        </div>
-                        <div class="message-confirm" hidden>
-                            <p>Your message has been sent.</p>
-                        </div>
-                        <div class="user-fail" hidden>
-                            <p>Please enter a valid user.</p>
-                        </div>
-                        <div class="message-fail" hidden>
-                            <p>Please enter a message.</p>
-                        </div>
-                    </form>
-                    <form id="settings" class="settings-container grid-line">
-                        <h2 class="section-header">SETTINGS</h2>
-                        <strong>Send Email Notification</strong>
-                        <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox" id="email">
-                            <span>
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                            </span>
-                        </label>
-                        <br>
-                        <strong>Set Profile to Public</strong>
-                        <label class="switch-light switch-ios" onclick="">
-                            <input type="checkbox" id="public">
-                            <span>
-                                <span>Off</span>
-                                <span>On</span>
-                                <a></a>
-                            </span>
-                        </label>
-                        <br>
-                        <div class="settings-select-container">
-                            <select id="timezone" name="timezone">
-                                <option value="0" selected="selected" hidden>Select Timezone</option>
-                                <option value="GMT">GMT</option>
-                                <option value="BST">BST</option>
-                                <option value="IST">IST</option>
-                                <option value="WET">WET</option>
-                                <option value="WEST">WEST</option>
-                                <option value="CET">CET</option>
-                                <option value="CEST">CEST</option>
-                                <option value="EET">EET</option>
-                                <option value="EEST">EEST</option>
-                                <option value="MSK">MSK</option>
-                                <option value="MSD">MSD</option>
-                                <option value="AST">AST</option>
-                                <option value="ADT">ADT</option>
-                                <option value="EST">EST</option>
-                                <option value="EDT">EDT</option>
-                                <option value="ET">ET</option>
-                                <option value="CST">CST</option>
-                                <option value="CDT">CDT</option>
-                                <option value="CT">CT</option>
-                                <option value="MST">MST</option>
-                                <option value="MDT">MDT</option>
-                                <option value="MT">MT</option>
-                                <option value="PST">PST</option>
-                                <option value="PDT">PDT</option>
-                                <option value="PT">PT</option>
-                                <option value="HST">HST</option>
-                                <option value="AKST">AKST</option>
-                                <option value="AKDT">AKDT</option>
-                                <option value="AEST">AEST</option>
-                                <option value="AEDT">AEDT</option>
-                                <option value="ACST">ACST</option>
-                                <option value="ACDT">ACDT</option>
-                                <option value="AWST">AWST</option>
+                </div>
+                <form class="message-user-container grid-line grid-section grid-section">
+                    <h2 class="section-header">MESSAGE USER</h2>
+                    <div class="message-input-container">
+                        <div class="autocomplete">
+                            <select class="chosen" id="user">
+                                <option value="0" selected="selected" hidden>Select User</option>
+                                <option>Victoria Chambers</option>
+                                <option>Dale Byrd</option>
+                                <option>Dawn Wood</option>
+                                <option>Dan Oliver</option>
+                                <option>Josh Sullivan</option>
                             </select>
                         </div>
-                        <div class="settings-button-container">
-                            <button type="submit" id="save">save</button>
-                            <button type="cancel" id="cancel">cancel</button>
-                        </div>
-
-                    </form>
-                </div>
-            </main>
-            <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
-            <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-            <script src = "https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
-            <script>
-                $(".chosen").chosen();
-            </script>
-            <script src = "js/app.js"></script>
-        </div>
+                        <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
+                        <button type="submit">send</button>
+                    </div>
+                    <div class="message-confirm" hidden>
+                        <p>Your message has been sent.</p>
+                    </div>
+                    <div class="user-fail" hidden>
+                        <p>Please enter a valid user.</p>
+                    </div>
+                    <div class="message-fail" hidden>
+                        <p>Please enter a message.</p>
+                    </div>
+                </form>
+                <form id="settings" class="settings-container grid-line grid-section">
+                    <h2 class="section-header">SETTINGS</h2>
+                    <strong>Send Email Notification</strong>
+                    <label class="switch-light switch-ios" onclick="">
+                        <input type="checkbox" id="email">
+                        <span>
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
+                    <br>
+                    <strong>Set Profile to Public</strong>
+                    <label class="switch-light switch-ios" onclick="">
+                        <input type="checkbox" id="public">
+                        <span>
+                            <span>Off</span>
+                            <span>On</span>
+                            <a></a>
+                        </span>
+                    </label>
+                    <br>
+                    <div class="settings-select-container">
+                        <select id="timezone" name="timezone">
+                            <option value="0" selected="selected" hidden>Select Timezone</option>
+                            <option value="GMT">GMT</option>
+                            <option value="BST">BST</option>
+                            <option value="IST">IST</option>
+                            <option value="WET">WET</option>
+                            <option value="WEST">WEST</option>
+                            <option value="CET">CET</option>
+                            <option value="CEST">CEST</option>
+                            <option value="EET">EET</option>
+                            <option value="EEST">EEST</option>
+                            <option value="MSK">MSK</option>
+                            <option value="MSD">MSD</option>
+                            <option value="AST">AST</option>
+                            <option value="ADT">ADT</option>
+                            <option value="EST">EST</option>
+                            <option value="EDT">EDT</option>
+                            <option value="ET">ET</option>
+                            <option value="CST">CST</option>
+                            <option value="CDT">CDT</option>
+                            <option value="CT">CT</option>
+                            <option value="MST">MST</option>
+                            <option value="MDT">MDT</option>
+                            <option value="MT">MT</option>
+                            <option value="PST">PST</option>
+                            <option value="PDT">PDT</option>
+                            <option value="PT">PT</option>
+                            <option value="HST">HST</option>
+                            <option value="AKST">AKST</option>
+                            <option value="AKDT">AKDT</option>
+                            <option value="AEST">AEST</option>
+                            <option value="AEDT">AEDT</option>
+                            <option value="ACST">ACST</option>
+                            <option value="ACDT">ACDT</option>
+                            <option value="AWST">AWST</option>
+                        </select>
+                    </div>
+                    <div class="settings-button-container">
+                        <button type="submit" id="save">save</button>
+                        <button type="cancel" id="cancel">cancel</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
+        <script>
+            $(".chosen").chosen();
+        </script>
+        <script src = "js/app.js"></script>
     </body>
 </html>

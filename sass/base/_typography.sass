@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap')
 
-
 *
   box-sizing: border-box
   font-family: 'Roboto', sans-serif
@@ -13,6 +12,8 @@ html, body
 
 .section-header
   text-align: center
+  @include media-query($tablet)
+    text-align: left
 
 input:focus
   background: #4d4d4d
@@ -22,3 +23,9 @@ input:focus
 .sm-txt
   font-size: $sm-txt-size
   color: $sm-txt-color
+
+.social-stat-count
+  font-size: $social-stat-count-text-size
+
+.new-user-name, .new-user-activity-description
+  font-size: $user-text-size
