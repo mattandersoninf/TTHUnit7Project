@@ -29,9 +29,9 @@
   @include std-space
   background-color: $light-gray
 
-#main-search
+#main-search 
   background: rgba(255,255,255,0.1)
-  border: 3px solid  #5294ff
+  border: 3px solid  $light-purple
   border-radius: .3em
   font-size: 16px
   background-color: white
@@ -43,10 +43,10 @@
   min-width: 120px
   display: block
   margin: 0 auto
+  @include media-query($desktop)
+    margin-right: $gutter-space
 
-input[id='user-search'],
-select,
-textarea
+input[id='user-search'], select, textarea
   background: rgba(255,255,255,0.1)
   border: 1px solid  #707070
   border-radius: .3em
