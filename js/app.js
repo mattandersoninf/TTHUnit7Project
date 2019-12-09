@@ -81,6 +81,12 @@ function bodyOnLoad(){
 
     }
 
+    document.querySelector(".chosen").style.display = "block";
+
+}
+
+function populate(){
+    
 }
 
 let lineChart = new Chart(trafficChart, {
