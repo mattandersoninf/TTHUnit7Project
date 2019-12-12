@@ -203,14 +203,7 @@
                     <h2 class="section-header">MESSAGE USER</h2>
                     <div class="message-input-container">
                         <div class="autocomplete">
-                            <select class="chosen" id="user">
-                                <option value="0" selected="selected" hidden>Select User</option>
-                                <option>Victoria Chambers</option>
-                                <option>Dale Byrd</option>
-                                <option>Dawn Wood</option>
-                                <option>Dan Oliver</option>
-                                <option>Josh Sullivan</option>
-                            </select>
+                            <input id="user-search" type="text" name="user-search" placeholder="Search for Users">
                         </div>
                         <textarea id="user-message" rows="4" placeholder="Message for User"></textarea>
                         <button type="submit">send</button>
@@ -295,9 +288,6 @@
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
         <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src = "https://cdnjs.cloudflare.com/ajax/libs/chosen/1.8.7/chosen.jquery.min.js"></script>
-        <script>
-            $(".chosen").chosen();
-        </script>
         <script src = "js/app.js"></script>
     </body>
 </html>
