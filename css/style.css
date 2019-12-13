@@ -426,16 +426,6 @@ canvas {
   width: 100%;
 }
 
-#traffic-chart {
-  max-height: 397px;
-  max-width: 795px;
-}
-
-#daily-chart, #mobile-chart {
-  max-height: 198px;
-  max-width: 396px;
-}
-
 /* image */
 .user-img {
   width: 30px;

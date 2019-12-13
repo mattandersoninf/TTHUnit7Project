@@ -27,7 +27,22 @@ const settingsForm = document.querySelector('form.settings-container');
 messageForm.addEventListener('submit', evt => {  evt.preventDefault() });
 settingsForm.addEventListener('submit', evt => {  evt.preventDefault() });
 
+// list of searchable users
 const searchableUsers = ['Victoria Chambers','Dale Byrd', 'Dawn Wood', 'Dan Oliver', 'Josh Sullivan']
+
+// notification function on click
+notificationBell = document.querySelector(".notification");
+
+notificationBell.addEventListener("click", function(){
+
+    if (document.querySelector(".dropdown-content").getAttribute("hidden") == null){
+        document.querySelector(".dropdown-content").setAttribute("hidden",true);
+    }
+    else{
+        document.querySelector(".dropdown-content").removeAttribute("hidden");
+    }
+
+})
 
 // line chart buttons
 hourlyLabel = document.querySelector("#hour");
