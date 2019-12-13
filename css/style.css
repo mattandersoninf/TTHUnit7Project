@@ -82,10 +82,6 @@ header {
   border-radius: 5px;
 }
 
-.notification:hover {
-  transform: translate(0, -3px);
-}
-
 /* grid */
 .grid {
   display: grid;
@@ -415,15 +411,12 @@ textarea:focus {
 
 /* chart */
 .traffic-chart-container {
-  width: 90%;
+  width: 80vmin;
+  height: 60vmin;
 }
 
 canvas {
   margin: 0 auto;
-}
-
-#traffic-chart, #daily-chart, #mobile-chart {
-  width: 100%;
 }
 
 /* image */
@@ -493,7 +486,6 @@ ul {
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
   background-color: #f1f1f1;
   min-width: 160px;
@@ -512,11 +504,6 @@ ul {
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
-}
-
-/* Show the dropdown menu on hover */
-.notification:hover .dropdown-content {
-  display: block;
 }
 
 /* Change the background color of the dropdown button when the dropdown content is shown */

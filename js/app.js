@@ -35,11 +35,11 @@ notificationBell = document.querySelector(".notification");
 
 notificationBell.addEventListener("click", function(){
 
-    if (document.querySelector(".dropdown-content").getAttribute("hidden") == null){
-        document.querySelector(".dropdown-content").setAttribute("hidden",true);
+    if (document.querySelector(".dropdown-content").getAttribute("hidden") == "true"){
+        document.querySelector(".dropdown-content").removeAttribute("hidden");
     }
     else{
-        document.querySelector(".dropdown-content").removeAttribute("hidden");
+        document.querySelector(".dropdown-content").setAttribute("hidden","true");
     }
 
 })
