@@ -35,11 +35,11 @@ notificationBell = document.querySelector(".notification");
 
 notificationBell.addEventListener("click", function(){
 
-    if (document.querySelector(".dropdown-content").getAttribute("hidden") == "true"){
+    if (document.querySelector(".dropdown-content").getAttribute("hidden") == ""){
         document.querySelector(".dropdown-content").removeAttribute("hidden");
     }
     else{
-        document.querySelector(".dropdown-content").setAttribute("hidden","true");
+        document.querySelector(".dropdown-content").setAttribute("hidden","");
     }
 
 });
@@ -382,33 +382,33 @@ sendUserButton.addEventListener("click", function(){
     
     if (document.querySelector("#user-search").value == ''){
         if (messageConfirm.getAttribute("hidden") == null){
-            messageConfirm.setAttribute("hidden",true);
+            messageConfirm.setAttribute("hidden","");
         }
         document.querySelector(".user-fail").removeAttribute("hidden");
     }
     else{
-        document.querySelector(".user-fail").setAttribute("hidden",true);
+        document.querySelector(".user-fail").setAttribute("hidden","");
     }
 
     if (document.querySelector("#user-message").value == ''){
         if (messageConfirm.getAttribute("hidden") == null){
-            messageConfirm.setAttribute("hidden",true);
+            messageConfirm.setAttribute("hidden","");
         }
 
         document.querySelector(".message-fail").removeAttribute("hidden");
     }
     else{
-        document.querySelector(".message-fail").setAttribute("hidden",true);
+        document.querySelector(".message-fail").setAttribute("hidden","");
     }
 
     if ((document.querySelector("#user-search").value != '') && (document.querySelector("#user-message").value.length != '')){
         
         if (document.querySelector(".message-fail").getAttribute("hidden") == null){
-            document.querySelector(".message-fail").setAttribute("hidden",true);
+            document.querySelector(".message-fail").setAttribute("hidden","");
         }
         
         if (document.querySelector(".user-fail").getAttribute("hidden") == null){
-            document.querySelector(".user-fail").setAttribute("hidden",true);
+            document.querySelector(".user-fail").setAttribute("hidden","");
         }
 
         messageConfirm.removeAttribute("hidden");
