@@ -411,12 +411,27 @@ textarea:focus {
 
 /* chart */
 .traffic-chart-container {
-  width: 80vmin;
-  height: 60vmin;
+  width: 90%;
 }
 
 canvas {
   margin: 0 auto;
+}
+
+#traffic-chart, #daily-chart, #mobile-chart {
+  width: 100%;
+}
+
+#traffic-chart, #daily-chart, #mobile-chart {
+  max-height: 397px;
+  max-width: 795px;
+}
+
+@media (min-width:1024px) {
+  #daily-chart, #mobile-chart {
+    max-height: 198px;
+    max-width: 396px;
+  }
 }
 
 /* image */
@@ -449,7 +464,6 @@ canvas {
   background-color: #443575;
   padding: 10px;
   margin: 0;
-  display: none;
 }
 .main-nav > ul > li:first-child {
   border-left: 3px solid #52ff52;

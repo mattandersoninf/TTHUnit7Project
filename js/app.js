@@ -42,7 +42,8 @@ notificationBell.addEventListener("click", function(){
         document.querySelector(".dropdown-content").setAttribute("hidden","true");
     }
 
-})
+});
+
 
 // line chart buttons
 hourlyLabel = document.querySelector("#hour");
@@ -93,6 +94,12 @@ function bodyOnLoad(){
     if (localStorage.getItem("public") == "true"){
 
         document.querySelector("#public").checked = true;
+
+    }
+
+    if (localStorage.getItem("timezone") != null){
+
+        document.querySelector("#timezone").value = localStorage.getItem("timezone");
 
     }
 
@@ -309,7 +316,8 @@ let lineChart = new Chart(trafficChart, {
     options:{
         legend:{
             display: false
-        }
+        },
+        maintainAspectRatio: true
     }
 });
 
@@ -414,6 +422,8 @@ document.querySelector("#save").addEventListener("click", function(){
 
     localStorage.setItem("public", document.querySelector("#public").checked);
 
+    localStorage.setItem("timezone", document.querySelector("#timezone").value);
+
 });
 
 document.querySelector("#cancel").addEventListener("click", function(){
@@ -422,9 +432,13 @@ document.querySelector("#cancel").addEventListener("click", function(){
 
     localStorage.removeItem("public");
 
+    localStorage.removeItem("timezone");
+
     document.querySelector("#email").checked = false;
 
     document.querySelector("#public").checked = false;
+
+    document.querySelector("#timezone").value = 0;
 
 });
 

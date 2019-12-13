@@ -1,11 +1,19 @@
 /* chart */
 
 .traffic-chart-container
-  width: 80vmin
-  height: 60vmin
+  width: 90%
 
 canvas
   margin: 0 auto
 
+#traffic-chart, #daily-chart, #mobile-chart
+  width: 100%
 
+#traffic-chart, #daily-chart, #mobile-chart
+  max-height: 397px
+  max-width: 795px
 
+#daily-chart, #mobile-chart
+  @include media-query($desktop)
+    max-height: 198px
+    max-width: 396px
