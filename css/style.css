@@ -82,6 +82,26 @@ header {
   border-radius: 5px;
 }
 
+.notification svg {
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+.notification svg:hover {
+  background-color: #443575;
+}
+
+.notification-marker {
+  position: absolute;
+  top: 5px;
+  right: 160px;
+  padding: 1px 6px;
+  z-index: 2;
+  border-radius: 50%;
+  color: red;
+  background-color: red;
+}
+
 /* grid */
 .grid {
   display: grid;
@@ -418,8 +438,8 @@ canvas {
   margin: 0 auto;
 }
 
-#traffic-chart, #daily-chart, #mobile-chart {
-  width: 100%;
+.traffic-chart-container, .daily-chart-container, .mobile-chart-container {
+  width: 85vw;
 }
 
 #traffic-chart, #daily-chart, #mobile-chart {
@@ -428,9 +448,8 @@ canvas {
 }
 
 @media (min-width:1024px) {
-  #daily-chart, #mobile-chart {
-    max-height: 198px;
-    max-width: 396px;
+  .daily-chart-container, .mobile-chart-container {
+    width: 35vw;
   }
 }
 

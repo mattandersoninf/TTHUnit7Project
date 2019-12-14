@@ -42,6 +42,8 @@ notificationBell.addEventListener("click", function(){
         document.querySelector(".dropdown-content").setAttribute("hidden","");
     }
 
+    document.querySelector(".notification-marker").setAttribute("hidden","");
+
 });
 
 
@@ -338,9 +340,10 @@ let barChart = new Chart(dailyChart, {
                     '100',
                     '200',
                     '175',
-                    '75']
+                    '75'
+                ]
             }
-            ]
+        ]
     },
     options:{
         legend:{
