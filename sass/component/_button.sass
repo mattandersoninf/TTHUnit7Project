@@ -5,6 +5,8 @@
   & .switch-ios.switch-toggle
     background-color: white
     box-shadow: inset rgba(0, 0, 0, 0) 0 1px 0
+    & input:checked
+      background-color: $toggle-checked-background-color
 
 .settings-container
   display: block
@@ -25,13 +27,10 @@
   & .switch-ios.switch-light input:checked ~ span a
     border-color: $light-purple
 
-.search-container
-  @include std-space
-  background-color: $light-gray
 
 #main-search 
   background: rgba(255,255,255,0.1)
-  border: 3px solid  $light-purple
+  border: 3px solid  $main-search-border-color
   border-radius: .3em
   font-size: 16px
   background-color: white
@@ -130,5 +129,3 @@ textarea:focus
   /*when navigating through the items using the arrow keys:*/
   background-color: DodgerBlue !important 
   color: #ffffff 
- 
-

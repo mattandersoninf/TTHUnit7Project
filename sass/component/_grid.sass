@@ -80,8 +80,11 @@
   width: 90%
   margin: $gutter-space auto
 
-.alert-container, .message-confirm
-  background-color: $dark-purple
+.alert-container
+  background-color: $alert-container-color
+
+.message-confirm
+  background-color: $message-confirm-color
 
 .message-fail, .user-fail
   background-color: $fail-color
@@ -138,3 +141,7 @@
   flex-direction: column
   justify-content: space-between
 
+
+.search-container
+  @include std-space
+  background-color: $search-container-color

@@ -8,11 +8,13 @@
 }
 
 html, body {
-  background-color: white;
+  background-color: #101010;
+  color: white;
   margin: 0;
 }
 
 .section-header {
+  color: white;
   text-align: center;
 }
 @media (min-width:768px) {
@@ -29,7 +31,7 @@ input:focus {
 
 .sm-txt {
   font-size: 10px;
-  color: rgba(0, 0, 0, 0.6);
+  color: #adadad;
 }
 
 .social-stat-count {
@@ -45,7 +47,7 @@ header {
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  background-color: #8a68ab;
+  background-color: #404040;
   color: white;
 }
 
@@ -72,7 +74,7 @@ header {
 }
 
 .user-name {
-  border-left: 1px solid #443575;
+  border-left: 1px solid white;
   margin-left: 3px;
   padding-left: 3px;
 }
@@ -205,12 +207,16 @@ header {
   margin: 10px auto;
 }
 
-.alert-container, .message-confirm {
-  background-color: #443575;
+.alert-container {
+  background-color: #eb0000;
+}
+
+.message-confirm {
+  background-color: #0022ff;
 }
 
 .message-fail, .user-fail {
-  background-color: #d12c2c;
+  background-color: #eb0000;
 }
 
 .settings-button-container, .alert-container {
@@ -273,6 +279,12 @@ header {
   justify-content: space-between;
 }
 
+.search-container {
+  margin: 10px 0;
+  padding: 10px 0;
+  background-color: #606060;
+}
+
 /* buttons and input fields */
 .traffic-toggle-container {
   margin: 10px 0;
@@ -281,6 +293,9 @@ header {
 .traffic-toggle-container .switch-ios.switch-toggle {
   background-color: white;
   box-shadow: inset rgba(0, 0, 0, 0) 0 1px 0;
+}
+.traffic-toggle-container .switch-ios.switch-toggle input:checked {
+  background-color: #0022ff;
 }
 
 .settings-container {
@@ -307,15 +322,9 @@ header {
   border-color: #8a68ab;
 }
 
-.search-container {
-  margin: 10px 0;
-  padding: 10px 0;
-  background-color: #e3e3e3;
-}
-
 #main-search {
   background: rgba(255, 255, 255, 0.1);
-  border: 3px solid #8a68ab;
+  border: 3px solid #0022ff;
   border-radius: 0.3em;
   font-size: 16px;
   background-color: white;
@@ -480,7 +489,7 @@ canvas {
 
 /* navigation */
 .main-nav {
-  background-color: #443575;
+  background-color: #202020;
   padding: 10px;
   margin: 0;
 }
