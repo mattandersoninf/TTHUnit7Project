@@ -3,16 +3,15 @@
 .main-nav
   background-color: $navigation-background-color
   padding: $gutter-space
-  margin: 0
-
-  & > ul > li:first-child
-    border-left: 3px solid $nav-checked-color
 
 .nav-item
   margin: $gutter-space auto
   float: left
   padding: 0.5rem
-  max-width: 54px
+  width: 40px
+  border: 2px
+  & a
+    display: block
 
 
   img
@@ -20,11 +19,11 @@
     height: 100%
     padding-bottom: $gutter-space
 
-ul
+.main-nav
   display: flex
   justify-content: space-evenly
   list-style: none
-  margin: 0
+  margin: 0 auto
   padding: 0
 
 .dashboard
