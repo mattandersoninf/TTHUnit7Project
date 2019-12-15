@@ -22,10 +22,10 @@
     margin: $gutter-space auto $gutter-space 5%
     float: left
   & .switch-ios.switch-light input:checked ~ span
-    border-color: $light-purple
-    box-shadow: inset 0 0 0 30px $light-purple
+    border-color: $setting-switch-checked-color
+    box-shadow: inset 0 0 0 30px $setting-switch-checked-color
   & .switch-ios.switch-light input:checked ~ span a
-    border-color: $light-purple
+    border-color: $setting-switch-checked-color
 
 
 #main-search 
@@ -86,8 +86,8 @@ textarea:focus
   margin: $gutter-space auto
 
 .message-input-container > button, .settings-container > .settings-button-container > button:first-of-type
-  background-color: $light-purple
-  border-color: $dark-purple
+  background-color: $message-button-color
+  border-color: $message-button-border-color
   color: white
 
 .settings-container > .settings-button-container > button:last-of-type

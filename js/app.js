@@ -218,9 +218,9 @@ let lineChart = new Chart(trafficChart, {
             label: 'Hourly',
             // straightens out the line
             lineTension: 0,
-            borderColor: '#8A68AB',
+            borderColor: '#0022FF',
             pointBackgroundColor: 'white',
-            backgroundColor: '#d1b9f0',
+            backgroundColor: '#7373ff',
             pointBorderWidth: 2,
             borderWidth: 1,
             fill: true,
@@ -243,9 +243,9 @@ let lineChart = new Chart(trafficChart, {
             label: 'Daily',
             // straightens out the line
             lineTension: 0,
-            borderColor: '#8A68AB',
+            borderColor: '#0022FF',
             pointBackgroundColor: 'white',
-            backgroundColor: '#d1b9f0',
+            backgroundColor: '#7373ff',
             pointBorderWidth: 2,
             borderWidth: 1,
             fill: true,
@@ -268,9 +268,9 @@ let lineChart = new Chart(trafficChart, {
             label: 'Weekly',
             // straightens out the line
             lineTension: 0,
-            borderColor: '#8A68AB',
+            borderColor: '#0022FF',
             pointBackgroundColor: 'white',
-            backgroundColor: '#d1b9f0',
+            backgroundColor: '#7373ff',
             pointBorderWidth: 2,
             borderWidth: 1,
             fill: true,
@@ -293,9 +293,9 @@ let lineChart = new Chart(trafficChart, {
             label: 'Monthly',
             // straightens out the line
             lineTension: 0,
-            borderColor: '#8A68AB',
+            borderColor: '#0022FF',
             pointBackgroundColor: 'white',
-            backgroundColor: '#d1b9f0',
+            backgroundColor: '#7373ff',
             pointBorderWidth: 2,
             borderWidth: 1,
             fill: true,
@@ -331,7 +331,7 @@ let barChart = new Chart(dailyChart, {
         labels:['S','M','T','W','T','F','S'],
         datasets:[
             {
-                backgroundColor: '#8A68AB',
+                backgroundColor: '#eb0000',
                 borderRadius: 2,
                 data:[
                     '50',
@@ -358,7 +358,7 @@ let doughnutChart = new Chart(mobileChart, {
     data:{
         labels:['Phones','Tablets','Desktop'],
         datasets:[{
-            backgroundColor: ['#639ddb','#63db83','#8A68AB'],
+            backgroundColor: ['#0022ff','#eb0000','#03fce8'],
             data:[
                 '15',
                 '15',

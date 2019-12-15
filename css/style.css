@@ -90,7 +90,7 @@ header {
 }
 
 .notification svg:hover {
-  background-color: #443575;
+  background-color: #101010;
 }
 
 .notification-marker {
@@ -315,11 +315,11 @@ header {
   float: left;
 }
 .settings-container .switch-ios.switch-light input:checked ~ span {
-  border-color: #8a68ab;
-  box-shadow: inset 0 0 0 30px #8a68ab;
+  border-color: #0022ff;
+  box-shadow: inset 0 0 0 30px #0022ff;
 }
 .settings-container .switch-ios.switch-light input:checked ~ span a {
-  border-color: #8a68ab;
+  border-color: #0022ff;
 }
 
 #main-search {
@@ -385,8 +385,8 @@ textarea:focus {
 }
 
 .message-input-container > button, .settings-container > .settings-button-container > button:first-of-type {
-  background-color: #8a68ab;
-  border-color: #443575;
+  background-color: #03fce8;
+  border-color: #00877c;
   color: white;
 }
 
@@ -478,7 +478,7 @@ canvas {
 }
 
 .svg-facebook, .svg-google, .svg-twitter {
-  background-color: #8a68ab;
+  background-color: #0022ff;
   padding: 10px;
 }
 
@@ -494,7 +494,7 @@ canvas {
   margin: 0;
 }
 .main-nav > ul > li:first-child {
-  border-left: 3px solid #52ff52;
+  border-left: 3px solid #03fce8;
 }
 
 .nav-item {
