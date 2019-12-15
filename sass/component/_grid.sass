@@ -7,24 +7,43 @@
   grid-template-areas: "nav", "main"
 
   @include media-query($desktop)
-    grid-template-columns: 85px 1fr
-    grid-template-areas: "header header", "nav main"
+    grid-template-columns: 55px 1fr
+    grid-template-areas: "nav main"
 
 main
   grid-col: "main"
 
 .main-nav
   grid-col: "nav"
-  list-style-type: none
   width: 100%
   padding: 0
 
+.grid-main
+  display: grid
+  grid-template-columns: 1fr 1fr
 
-.grid-section
+.dashboard-header-container
+  display: grid
+  grid-template-columns: 1fr 4fr
+  padding: 0 0 $gutter-space 0
+
+  & h1 
+    text-align: left
+    padding: 0 $gutter-space
+  & .search-container
+    margin: 0
+
+
+.grid-section:nth-child(n+2)
   padding: $gutter-space
+
+.grid-section:nth-child(-n+3), .grid-section:nth-child(6)
+  grid-column: 1/-1
+
 
 .grid-line
   border: 1px solid $grid-line-color
+
 
 #visits, #settings, .message-user-container, .new-user-container, .autocomplete
   width: 100%
