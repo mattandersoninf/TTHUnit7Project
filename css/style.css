@@ -439,21 +439,12 @@ textarea:focus {
 }
 
 /* chart */
-.traffic-chart-container {
-  width: 90%;
-}
-
 canvas {
   margin: 0 auto;
 }
 
 .traffic-chart-container, .daily-chart-container, .mobile-chart-container {
-  width: 85vw;
-}
-
-#traffic-chart, #daily-chart, #mobile-chart {
-  max-height: 397px;
-  max-width: 795px;
+  width: 70vw;
 }
 
 @media (min-width:1024px) {
