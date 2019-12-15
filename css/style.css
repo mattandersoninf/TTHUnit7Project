@@ -105,53 +105,8 @@ header {
 }
 
 /* grid */
-.grid-main-nav {
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
-  grid-template-areas: "nav", "main";
-}
-@media (min-width:1024px) {
-  .grid-main-nav {
-    grid-template-columns: 55px 1fr;
-    grid-template-areas: "nav main";
-  }
-}
-
-main {
-  grid-col: "main";
-}
-
-.main-nav {
-  grid-col: "nav";
-  width: 100%;
-  padding: 0;
-}
-
-.grid-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.dashboard-header-container {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  padding: 0 0 10px 0;
-}
-.dashboard-header-container h1 {
-  text-align: left;
-  padding: 0 10px;
-}
-.dashboard-header-container .search-container {
-  margin: 0;
-}
-
 .grid-section:nth-child(n+2) {
   padding: 10px;
-}
-
-.grid-section:nth-child(-n+3), .grid-section:nth-child(6) {
-  grid-column: 1/-1;
 }
 
 .grid-line {
@@ -320,7 +275,7 @@ main {
   max-width: 300px;
   min-width: 120px;
   display: block;
-  margin: 0 auto;
+  margin: 0 10px 0 auto;
 }
 @media (min-width:1024px) {
   #main-search {
@@ -428,16 +383,6 @@ canvas {
   margin: 0 auto;
 }
 
-.traffic-chart-container, .daily-chart-container, .mobile-chart-container {
-  width: 85vw;
-}
-
-@media (min-width:1024px) {
-  .daily-chart-container, .mobile-chart-container {
-    width: 35vw;
-  }
-}
-
 /* image */
 .user-img {
   width: 30px;
@@ -505,7 +450,7 @@ canvas {
   margin: 10px auto;
   float: left;
   padding: 0.5rem;
-  width: 40px;
+  width: 45px;
 }
 .nav-item a {
   display: block;
@@ -549,6 +494,74 @@ canvas {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .notification:hover .dropbtn {
   background-color: #3e8e41;
+}
+
+/* tablet */   
+@media screen and (min-width: 768px) {
+  .grid-main-nav {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+
+  main {
+    grid-col: "main";
+  }
+
+  .main-nav {
+    grid-col: "nav";
+    width: 100%;
+    padding: 0;
+  }
+  .main-nav ul {
+    margin: 0;
+  }
+
+  .grid-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header, nav, .grid-section:nth-child(-n+3), .grid-section:nth-child(6), .notification-container {
+    grid-column: 1/-1;
+  }
+
+  .dashboard-header-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    padding: 0 0 10px 0;
+  }
+  .dashboard-header-container h1 {
+    text-align: left;
+    padding: 0 10px;
+  }
+  .dashboard-header-container .search-container {
+    margin: 0;
+  }
+
+  .traffic-chart-container {
+    width: 85vw;
+  }
+
+  .daily-chart-container, .mobile-chart-container {
+    width: 45vw;
+  }
+}
+/* tablet */ 
+@media screen and ((min-width:1024px)) {
+  .grid-header-nav-main {
+    display: grid;
+    grid-template-columns: 55px 1fr;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    width: 100%;
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
