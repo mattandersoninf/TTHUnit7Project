@@ -3,15 +3,21 @@
     
 @media screen and (min-width: 1024px)
 
-    .grid-header-nav-main
+    .grid-nav-main
         display: grid
         grid-template-rows: auto
         grid-template-columns: 55px 1fr
-        grid-area: "nav",  "main"
+        grid-template-areas: "nav"  "main"
 
-    nav ul
-        display: block
-        justify-content: none
+        nav
+            grid-col: nav
+    
+        main 
+            grid-col: main
+
+        nav ul
+            display: block
+            justify-content: none
 
     
 

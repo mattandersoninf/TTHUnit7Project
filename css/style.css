@@ -144,7 +144,7 @@ header {
   padding: 5px;
   border-radius: 5px;
   width: 90%;
-  margin: 10px auto;
+  margin: 0;
 }
 
 .alert-container {
@@ -461,7 +461,7 @@ canvas {
 }
 
 .dashboard {
-  margin: 10px auto;
+  margin: 10px 10px 10px 0;
   text-align: center;
 }
 
@@ -522,7 +522,7 @@ canvas {
     grid-template-columns: 1fr 1fr;
   }
 
-  header, nav, .grid-section:nth-child(-n+3), .grid-section:nth-child(6), .notification-container {
+  header, .grid-section:nth-child(-n+3), .grid-section:nth-child(6), .notification-container {
     grid-column: 1/-1;
   }
 
@@ -539,6 +539,10 @@ canvas {
     margin: 0;
   }
 
+  .dashboard {
+    margin: 10px 10px 10px 0;
+  }
+
   .traffic-chart-container {
     width: 85vw;
   }
@@ -548,19 +552,22 @@ canvas {
   }
 }
 /* tablet */ 
-@media screen and ((min-width:1024px)) {
-  .grid-header-nav-main {
+@media screen and (min-width: 1024px) {
+  .grid-nav-main {
     display: grid;
+    grid-template-rows: auto;
     grid-template-columns: 55px 1fr;
+    grid-template-areas: "nav" "main";
   }
-
-  nav {
-    display: block;
+  .grid-nav-main nav {
+    grid-col: nav;
   }
-
-  nav ul {
-    width: 100%;
+  .grid-nav-main main {
+    grid-col: main;
+  }
+  .grid-nav-main nav ul {
     display: block;
+    justify-content: none;
   }
 }
 
