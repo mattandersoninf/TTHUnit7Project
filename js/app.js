@@ -132,6 +132,7 @@ function populate(inp, arr){
             if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
                 // make a div for each matching user
                 b = document.createElement("DIV");
+                b.style.background = "#202020";
                 // turn the matching letters bold
                 b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
                 b.innerHTML += arr[i].substr(val.length);
