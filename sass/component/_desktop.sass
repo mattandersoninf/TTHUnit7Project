@@ -1,19 +1,22 @@
-/* tablet */ 
+/* desktop */ 
     
     
 @media screen and (min-width: 1024px)
 
-    .grid-nav-main
+    .body-wrapper
         display: grid
         grid-template-rows: auto
         grid-template-columns: 55px 1fr
-        grid-template-areas: "nav"  "main"
+        grid-template-areas: "header header" "nav main"
+
+        header
+            grid-area: header
 
         nav
-            grid-col: nav
+            grid-area: nav
     
         main 
-            grid-col: main
+            grid-area: main
 
         nav ul
             display: block

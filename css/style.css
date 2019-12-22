@@ -551,21 +551,24 @@ canvas {
     width: 45vw;
   }
 }
-/* tablet */ 
+/* desktop */ 
 @media screen and (min-width: 1024px) {
-  .grid-nav-main {
+  .body-wrapper {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 55px 1fr;
-    grid-template-areas: "nav" "main";
+    grid-template-areas: "header header" "nav main";
   }
-  .grid-nav-main nav {
-    grid-col: nav;
+  .body-wrapper header {
+    grid-area: header;
   }
-  .grid-nav-main main {
-    grid-col: main;
+  .body-wrapper nav {
+    grid-area: nav;
   }
-  .grid-nav-main nav ul {
+  .body-wrapper main {
+    grid-area: main;
+  }
+  .body-wrapper nav ul {
     display: block;
     justify-content: none;
   }
