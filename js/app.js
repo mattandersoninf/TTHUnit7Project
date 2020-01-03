@@ -48,10 +48,14 @@ notificationBell.addEventListener("click", function(){
 
 
 // line chart buttons
-hourlyLabel = document.querySelector("#hour");
-dailyLabel = document.querySelector("#day");
-weeklyLabel = document.querySelector("#week");
-monthlyLabel = document.querySelector("#month");
+const hourlyLabel = document.querySelector("#hour");
+const dailyLabel = document.querySelector("#day");
+const weeklyLabel = document.querySelector("#week");
+const monthlyLabel = document.querySelector("#month");
+const hLabel = document.querySelector('[for="hour"]');
+const dLabel = document.querySelector('[for="day"]');
+const wLabel = document.querySelector('[for="week"]');
+const mLabel = document.querySelector('[for="month"]');
 
 hourlyLabel.addEventListener("click", function(){
     lineChart.data.datasets[0]["hidden"] = false;
@@ -59,6 +63,10 @@ hourlyLabel.addEventListener("click", function(){
     lineChart.data.datasets[2]["hidden"] = true;
     lineChart.data.datasets[3]["hidden"] = true;
     lineChart.update();
+    hLabel.classList.add("active");
+    dLabel.classList.remove("active");
+    wLabel.classList.remove("active");
+    mLabel.classList.remove("active");
 });
 
 dailyLabel.addEventListener("click", function(){
@@ -67,6 +75,10 @@ dailyLabel.addEventListener("click", function(){
     lineChart.data.datasets[2]["hidden"] = true;
     lineChart.data.datasets[3]["hidden"] = true;
     lineChart.update();
+    dLabel.classList.add("active");
+    hLabel.classList.remove("active");
+    wLabel.classList.remove("active");
+    mLabel.classList.remove("active");
 });
 
 weeklyLabel.addEventListener("click", function(){
@@ -75,6 +87,10 @@ weeklyLabel.addEventListener("click", function(){
     lineChart.data.datasets[2]["hidden"] = false;
     lineChart.data.datasets[3]["hidden"] = true;
     lineChart.update();
+    wLabel.classList.add("active");
+    hLabel.classList.remove("active");
+    dLabel.classList.remove("active");
+    mLabel.classList.remove("active");
 });
 
 monthlyLabel.addEventListener("click", function(){
@@ -83,6 +99,10 @@ monthlyLabel.addEventListener("click", function(){
     lineChart.data.datasets[2]["hidden"] = true;
     lineChart.data.datasets[3]["hidden"] = false;
     lineChart.update();
+    mLabel.classList.add("active");
+    hLabel.classList.remove("active");
+    dLabel.classList.remove("active");
+    wLabel.classList.remove("active");
 });
 
 // on startup, give the setting inputs local storage values
@@ -106,6 +126,8 @@ function bodyOnLoad(){
     }
 
     populate(document.querySelector("#user-search"), searchableUsers);
+    
+    hLabel.classList.add("active");
 
 }
 

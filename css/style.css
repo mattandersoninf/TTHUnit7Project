@@ -105,6 +105,10 @@ header {
 }
 
 /* grid */
+.active {
+  background-color: #03fce8;
+}
+
 .grid-section:nth-child(n+2) {
   padding: 10px;
 }
@@ -139,16 +143,21 @@ header {
   margin: 10px auto;
 }
 
-.alert-container, .message-confirm, .user-fail, .message-fail {
+.message-confirm, .user-fail, .message-fail {
   color: white;
   padding: 5px;
   border-radius: 5px;
   width: 90%;
-  margin: 0;
+  margin: 10px auto;
 }
 
 .alert-container {
   background-color: #eb0000;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0;
 }
 
 .message-confirm {
@@ -224,6 +233,28 @@ header {
   padding: 10px;
   margin: 0 auto;
   background-color: #606060;
+}
+
+.traffic-header-container {
+  display: flex;
+}
+.traffic-header-container h2 {
+  float: left;
+}
+.traffic-header-container .traffic-input-container {
+  float: right;
+  margin: auto 10px auto auto;
+}
+.traffic-header-container .traffic-input-container input {
+  display: none;
+}
+.traffic-header-container .traffic-input-container label {
+  padding: 0 10px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+.traffic-header-container .chartjs-size-monitor {
+  width: 100%;
 }
 
 /* buttons and input fields */

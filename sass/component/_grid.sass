@@ -1,5 +1,8 @@
 /* grid */
 
+.active
+  background-color: $active-background-color
+
 .grid-section:nth-child(n+2)
   padding: $gutter-space
 
@@ -26,15 +29,21 @@
     width: 90%
     margin: 10px auto
 
-.alert-container, .message-confirm,.user-fail, .message-fail
+.message-confirm,.user-fail, .message-fail
   color: white
   padding: 5px
   border-radius: 5px
   width: 90%
-  margin: 0
+  margin: $gutter-space auto
+
 
 .alert-container
   background-color: $alert-container-color
+  color: white
+  padding: 5px
+  border-radius: 5px
+  width: 100%
+  margin: 0
 
 .message-confirm
   background-color: $message-confirm-color
@@ -100,3 +109,22 @@
   padding: 10px
   margin: 0 auto
   background-color: $search-container-color
+
+.traffic-header-container
+  display: flex
+
+  h2
+    float: left
+  
+  .traffic-input-container
+    float: right
+    margin: auto $gutter-space auto auto
+    input
+      display: none
+    label
+      padding: 0 $gutter-space
+      margin: 0 $gutter-space
+      border-radius: 5px
+
+  .chartjs-size-monitor
+    width: 100%
